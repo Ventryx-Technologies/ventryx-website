@@ -1,0 +1,113 @@
+.hero {
+    min-height: calc(100vh - 78px);
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    background: 
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.20), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(56, 189, 248, 0.20), transparent 30%);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #7dd3fc;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.hero h1 {
+    font-size: clamp(-2.5rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    max-width: 12ch;
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.visual-card {
+    background: rgba(255, 255,255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.large-card {
+    grid-column: 1 / -1;
+    min-height: 220px;
+}
+
+.card-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #7dd3fc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.visual-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.visual-card p {
+    color: #d5deea;
+}
+
+@media (max-width: 900px) {
+    .header-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 16px 0;
+    }
+
+    .site-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero h1 {
+        max-width: none;
+    }
+
+    .hero-visual {
+        grid-template-columns: 1fr;
+    }
+
+    .large-card {
+        grid-column: auto;
+    }
+}
