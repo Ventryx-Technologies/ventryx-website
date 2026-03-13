@@ -164,7 +164,7 @@
 }
 
 .featured-product {
-    padding: 120px 0;
+    padding: 140px 0;
 }
 
 .featured-product-grid {
@@ -177,7 +177,7 @@
 .featured-product-content h2 {
     font-size: clamp(2rem, 4vw, 3.2rem);
     line-height: 1.12;
-    max-width: 14ch;
+    max-width: 16ch;
     margin: 16px 0 22px;
 }
 
@@ -256,4 +256,46 @@
     .featured-product-content h2 {
         max-width: none;
     }
+}
+
+.technology {
+    padding: 120px 0;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.technology-header {
+    max-width: 760px;
+    margin-bottom: 60px;
+}
+
+.technology-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 16px 0;
+}
+
+.technology-description {
+    color: #b8c2d0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.technology-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.tech-card {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    padding: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tech-card h3 {
+    margin-bottom: 10px;
+}
+
+.tech-card p {
+    color: #c6d0e0;
 }
