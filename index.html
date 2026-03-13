@@ -2,295 +2,775 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ventryx Technologies | Software for Modern Businesses</title>
     <meta name="description"
-        content="Ventryx Technologies builds scalable SaaS playfforms, APIs, and digital infrastructure for modern businesses." />
-    <link rel="stylesheet" href="assets/css/main.css" />
+        content="Ventryx Technologies builds scalable SaaS platforms, APIs, and digital infrastructure for modern businesses." />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
     <header class="site-header">
-        <div class="container header-inner">
-            <a href="index.html" class="logo">Ventryx</a>
+        <!-- Utility Bar -->
+        <div class="utility-bar">
+            <div class="container utility-bar-inner">
+                <div class="utility-spacer"></div>
 
-            <nav class="site-nav">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About</a>
+                <div class="utility-links">
+                    <a href="#">Developers</a>
+                    <a href="#">Docs</a>
+                    <a href="#">Support</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <div class="main-navbar">
+            <div class="container navbar-inner">
+                <!-- Logo -->
+                <a href="index.html" class="brand">
+                    <span class="brand-mark">V</span>
+                    <span class="brand-text">Ventryx</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <ul class="nav-list">
+                        <!-- Platform -->
+                        <li class="nav-item has-mega-menu">
+                            <button class="nav-trigger" type="button">
+                                Platform
+                                <span class="nav-caret">▾</span>
+                            </button>
+
+                            <div class="mega-menu">
+                                <div class="mega-menu-inner mega-menu-4col">
+                                    <div class="mega-col mega-col-featured">
+                                        <p class="mega-label">Overview</p>
+                                        <a href="#" class="mega-feature-title">Core Platform</a>
+                                        <p class="mega-feature-text">
+                                            Build, manage, and scale modern software systems with
+                                            Ventryx infrastructure.
+                                        </p>
+
+                                        <a href="#" class="mega-link-row">APIs</a>
+                                        <a href="#" class="mega-link-row">Authentication</a>
+                                        <a href="#" class="mega-link-row">Integrations</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Infrastructure</p>
+                                        <a href="#" class="mega-link-title">Cloud Services</a>
+                                        <a href="#" class="mega-link-title">Identity &amp; Access</a>
+                                        <a href="#" class="mega-link-title">API Gateway</a>
+                                        <a href="#" class="mega-link-title">Event Systems</a>
+                                        <a href="#" class="mega-link-title">Data Pipelines</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Developer Tools</p>
+                                        <a href="#" class="mega-link-title">SDKs</a>
+                                        <a href="#" class="mega-link-title">CLI Tools</a>
+                                        <a href="#" class="mega-link-title">Environments</a>
+                                        <a href="#" class="mega-link-title">Observability</a>
+                                        <a href="#" class="mega-link-title">Webhooks</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Security</p>
+                                        <a href="#" class="mega-link-title">Access Control</a>
+                                        <a href="#" class="mega-link-title">Audit Logs</a>
+                                        <a href="#" class="mega-link-title">Encryption</a>
+                                        <a href="#" class="mega-link-title">Compliance</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Products -->
+                        <li class="nav-item has-mega-menu">
+                            <button class="nav-trigger" type="button">
+                                Products
+                                <span class="nav-caret">▾</span>
+                            </button>
+
+                            <div class="mega-menu">
+                                <div class="mega-menu-inner mega-menu-4col">
+                                    <div class="mega-col mega-col-featured">
+                                        <p class="mega-label">Products</p>
+                                        <a href="products.html" class="mega-feature-title">Operra Platform</a>
+                                        <p class="mega-feature-text">
+                                            Tools for modern operations, automation, internal workflows,
+                                            and software teams.
+                                        </p>
+
+                                        <a href="#" class="mega-link-row">Admin Console</a>
+                                        <a href="#" class="mega-link-row">Analytics</a>
+                                        <a href="#" class="mega-link-row">Automation</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Operations</p>
+                                        <a href="#" class="mega-link-title">Workflows</a>
+                                        <a href="#" class="mega-link-title">Task Automation</a>
+                                        <a href="#" class="mega-link-title">Approvals</a>
+                                        <a href="#" class="mega-link-title">Internal Dashboards</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Analytics</p>
+                                        <a href="#" class="mega-link-title">Reporting</a>
+                                        <a href="#" class="mega-link-title">Usage Metrics</a>
+                                        <a href="#" class="mega-link-title">Activity Logs</a>
+                                        <a href="#" class="mega-link-title">Insights</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Automation</p>
+                                        <a href="#" class="mega-link-title">Triggers</a>
+                                        <a href="#" class="mega-link-title">Rules Engine</a>
+                                        <a href="#" class="mega-link-title">Notifications</a>
+                                        <a href="#" class="mega-link-title">Integrations</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Solutions -->
+                        <li class="nav-item has-mega-menu">
+                            <button class="nav-trigger" type="button">
+                                Solutions
+                                <span class="nav-caret">▾</span>
+                            </button>
+
+                            <div class="mega-menu">
+                                <div class="mega-menu-inner mega-menu-4col">
+                                    <div class="mega-col">
+                                        <p class="mega-label">Use Cases</p>
+                                        <a href="#" class="mega-link-title">Internal Platforms</a>
+                                        <a href="#" class="mega-link-title">Operations Automation</a>
+                                        <a href="#" class="mega-link-title">Developer Workflows</a>
+                                        <a href="#" class="mega-link-title">Business Systems</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Teams</p>
+                                        <a href="#" class="mega-link-title">Engineering</a>
+                                        <a href="#" class="mega-link-title">Product</a>
+                                        <a href="#" class="mega-link-title">Operations</a>
+                                        <a href="#" class="mega-link-title">Leadership</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Company Size</p>
+                                        <a href="#" class="mega-link-title">Startup</a>
+                                        <a href="#" class="mega-link-title">Growing Teams</a>
+                                        <a href="#" class="mega-link-title">Enterprise</a>
+                                    </div>
+
+                                    <div class="mega-col mega-card-col">
+                                        <div class="mega-card">
+                                            <p class="mega-card-label">Featured</p>
+                                            <h4>Built for modern software teams</h4>
+                                            <p>
+                                                Ventryx helps teams centralize workflows, automation,
+                                                and infrastructure decisions.
+                                            </p>
+                                            <a href="#" class="mega-card-link">Explore solutions</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Resources -->
+                        <li class="nav-item has-mega-menu">
+                            <button class="nav-trigger" type="button">
+                                Resources
+                                <span class="nav-caret">▾</span>
+                            </button>
+
+                            <div class="mega-menu">
+                                <div class="mega-menu-inner mega-menu-4col">
+                                    <div class="mega-col">
+                                        <p class="mega-label">Developers</p>
+                                        <a href="#" class="mega-link-title">Documentation</a>
+                                        <a href="#" class="mega-link-title">API Reference</a>
+                                        <a href="#" class="mega-link-title">Code Samples</a>
+                                        <a href="#" class="mega-link-title">Changelog</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Learn</p>
+                                        <a href="#" class="mega-link-title">Blog</a>
+                                        <a href="#" class="mega-link-title">Guides</a>
+                                        <a href="#" class="mega-link-title">Case Studies</a>
+                                        <a href="#" class="mega-link-title">Tutorials</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Support</p>
+                                        <a href="#" class="mega-link-title">Help Center</a>
+                                        <a href="#" class="mega-link-title">Contact Support</a>
+                                        <a href="#" class="mega-link-title">Partners</a>
+                                        <a href="#" class="mega-link-title">Status</a>
+                                    </div>
+
+                                    <div class="mega-col mega-card-col">
+                                        <div class="mega-card">
+                                            <p class="mega-card-label">Latest</p>
+                                            <h4>Developer resources that move faster</h4>
+                                            <p>
+                                                Explore docs, guides, examples, and support material
+                                                built for real product teams.
+                                            </p>
+                                            <a href="#" class="mega-card-link">Go to resources</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Company -->
+                        <li class="nav-item has-mega-menu">
+                            <button class="nav-trigger" type="button">
+                                Company
+                                <span class="nav-caret">▾</span>
+                            </button>
+
+                            <div class="mega-menu">
+                                <div class="mega-menu-inner mega-menu-4col">
+                                    <div class="mega-col">
+                                        <p class="mega-label">Overview</p>
+                                        <a href="about.html" class="mega-link-title">About Ventryx</a>
+                                        <a href="#" class="mega-link-title">Mission</a>
+                                        <a href="#" class="mega-link-title">Vision</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Company</p>
+                                        <a href="#" class="mega-link-title">Leadership</a>
+                                        <a href="#" class="mega-link-title">Careers</a>
+                                        <a href="#" class="mega-link-title">News</a>
+                                        <a href="contact.html" class="mega-link-title">Contact</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Technology</p>
+                                        <a href="technology.html" class="mega-link-title">Platform Architecture</a>
+                                        <a href="#" class="mega-link-title">Security</a>
+                                        <a href="#" class="mega-link-title">Reliability</a>
+                                    </div>
+
+                                    <div class="mega-col mega-card-col">
+                                        <div class="mega-card">
+                                            <p class="mega-card-label">Ventryx</p>
+                                            <h4>Infrastructure for modern businesses</h4>
+                                            <p>
+                                                Building scalable systems, tools, and platforms for the
+                                                next generation of software.
+                                            </p>
+                                            <a href="about.html" class="mega-card-link">Learn more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Pricing -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Pricing</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Actions -->
+                <div class="nav-actions">
+                    <button class="search-btn" type="button" aria-label="Search">
+                        <span>⌕</span>
+                    </button>
+
+                    <a href="contact.html" class="btn btn-outline">Contact Sales</a>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+
+                    <button class="mobile-menu-toggle" type="button" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-inner">
+                <a href="#">Platform</a>
                 <a href="products.html">Products</a>
-                <a href="technology.html">Technology</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-
-            <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+                <a href="#">Solutions</a>
+                <a href="#">Resources</a>
+                <a href="about.html">Company</a>
+                <a href="#">Pricing</a>
+                <a href="contact.html">Contact Sales</a>
+                <a href="contact.html" class="mobile-cta">Get Started</a>
+            </div>
         </div>
     </header>
 
     <main>
+        <!-- Hero -->
         <section class="hero">
             <div class="container hero-grid">
                 <div class="hero-content">
-                    <p class="eyebrow">Cloud Software • APIs • Infrastructure</p>
-
-                    <h1>Building Software for the next Generation of Businesses</h1>
-
-                    <p class="hero-text">
-                        Ventryx Technologies develops scalable SaaS platforms, developer-focused systems, and modern
-                        digital infrastructure designed to help businesses operate smarter and grow faster. Our
-                        solutions are built with the latest technologies to ensure reliability, security, and
-                        performance for our clients.
+                    <span class="eyebrow">Software for Modern Businesses</span>
+                    <h1>Build the Infrastructure Powering Modern Software</h1>
+                    <p>
+                        Ventryx Technologies creates scalable platforms, APIs, and digital systems
+                        for modern businesses, startups, and software teams.
                     </p>
 
                     <div class="hero-actions">
-                        <a href="products.html" class="btn btn-primary">Explore Products</a>
-                        <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                        <a href="technology.html" class="btn btn-outline">Explore Technology</a>
                     </div>
                 </div>
 
                 <div class="hero-visual">
-                    <div class="visual-card large-card">
-                        <span class="card-label">Featured Platform</span>
-                        <h3>Operra</h3>
-                        <p>Business operations software designed to centralize workflows, automation, and core systems.
-                        </p>
-                    </div>
+                    <div class="platform-preview">
+                        <div class="preview-topbar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
 
-                    <div class="visual-card small-card">
-                        <span class="card-label">Infrastructure</span>
-                        <p>APIs, backend systems, and scalable cloud architecture.</p>
+                        <div class="preview-header">
+                            <div>
+                                <p class="preview-label">VENTRYX PLATFORM</p>
+                                <h3>Infrastructure Command Center</h3>
+                            </div>
+                            <div class="preview-status">Live</div>
+                        </div>
+
+                        <div class="preview-grid">
+                            <div class="preview-card">
+                                <p>API Gateway</p>
+                                <strong>128 Active Routes</strong>
+                            </div>
+                            <div class="preview-card">
+                                <p>Authentication</p>
+                                <strong>99.99% Uptime</strong>
+                            </div>
+                            <div class="preview-card">
+                                <p>Automation</p>
+                                <strong>42 Running Flows</strong>
+                            </div>
+                            <div class="preview-card">
+                                <p>Analytics</p>
+                                <strong>18.4K Events</strong>
+                            </div>
+                        </div>
+
+                        <div class="preview-footer">
+                            <div class="preview-line"></div>
+                            <div class="preview-line short"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="positioning">
+
+        <!-- Trust Strip -->
+        <section class="trust-strip">
             <div class="container">
+                <p class="section-kicker center">Built for modern software teams</p>
+                <div class="trust-logos">
+                    <span>Platforms</span>
+                    <span>APIs</span>
+                    <span>Automation</span>
+                    <span>Security</span>
+                    <span>Infrastructure</span>
+                </div>
+            </div>
+        </section>
 
-                <div class="positioning-header">
-                    <p class="section-label">What We Build</p>
-
-                    <h2>
-                        Software infrastructure designed for modern businesses.
-                    </h2>
-
-                    <p class="section-description">
-                        Ventryx Technologies builds scalable platforms, backend systems,
-                        and cloud infrastructure that help companies operate efficiently
-                        and grow with reliable digital foundations.
+        <!-- Capabilities -->
+        <section class="capabilities section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">Core Platform Capabilities</span>
+                    <h2>Everything needed to build, operate, and scale modern systems</h2>
+                    <p>
+                        Ventryx brings infrastructure, developer tools, automation, and business systems
+                        together in one modern platform experience.
                     </p>
                 </div>
 
-                <div class="positioning-grid">
-
-                    <div class="position-card">
-                        <h3>Cloud Software</h3>
-                        <p>
-                            We develop modern SaaS platforms designed to solve real operational
-                            challenges and streamline digital workflows.
-                        </p>
-                    </div>
-
-                    <div class="position-card">
+                <div class="capabilities-grid">
+                    <article class="capability-card">
+                        <div class="capability-icon">API</div>
                         <h3>API Infrastructure</h3>
-                        <p>
-                            Our backend systems and APIs enable businesses to integrate services,
-                            automate processes, and build scalable technology ecosystems.
+                        <p>Design, manage, and scale application interfaces for modern products and internal systems.
                         </p>
-                    </div>
+                    </article>
 
-                    <div class="position-card">
-                        <h3>Scalable Architecture</h3>
-                        <p>
-                            Our systems are designed with performance, security, and
-                            long-term scalability in mind.
+                    <article class="capability-card">
+                        <div class="capability-icon">AUTH</div>
+                        <h3>Authentication</h3>
+                        <p>Secure access control, identity management, and protected workflows across your platform.</p>
+                    </article>
+
+                    <article class="capability-card">
+                        <div class="capability-icon">AUTO</div>
+                        <h3>Automation</h3>
+                        <p>Streamline repetitive operations with triggers, rules, notifications, and workflow
+                            orchestration.</p>
+                    </article>
+
+                    <article class="capability-card">
+                        <div class="capability-icon">DATA</div>
+                        <h3>Data Pipelines</h3>
+                        <p>Move, structure, and monitor operational data across services, tools, and business processes.
                         </p>
-                    </div>
+                    </article>
 
-                </div>
-
-            </div>
-        </section>
-        <section class="featured-product">
-            <div class="container featured-product-grid">
-                <div class="featured-product-content">
-                    <p class="section-label">Featured Platform</p>
-                    <h2>Operra is Ventryx’s flagship business infrastructure platform.</h2>
-                    <p class="featured-product-text">
-                        Operra is being built to help businesses centralize workflows, improve operational visibility,
-                        and manage core digital systems through a modern software platform.
-                    </p>
-                    <p class="featured-product-text">
-                        Designed as a scalable foundation for automation, APIs, and business operations,
-                        Operra represents the next step in Ventryx Technologies’ software ecosystem.
-                    </p>
-
-                    <div class="featured-product-actions">
-                        <a href="products.html" class="btn btn-primary">Explore Products</a>
-                        <a href="contact.html" class="btn btn-secondary">Contact Ventryx</a>
-                    </div>
-                </div>
-
-                <div class="featured-product-visual">
-                    <div class="product-panel product-panel-main">
-                        <span class="product-panel-label">Platform</span>
-                        <h3>Operra</h3>
-                        <p>
-                            Business infrastructure software designed to support workflows,
-                            automation, backend connectivity, and scalable operations.
+                    <article class="capability-card">
+                        <div class="capability-icon">SEC</div>
+                        <h3>Security</h3>
+                        <p>Build with strong controls, auditability, reliability, and modern security-first practices.
                         </p>
-                    </div>
+                    </article>
 
-                    <div class="product-panel">
-                        <span class="product-panel-label">Use Case</span>
-                        <p>Centralized business operations and digital process management.</p>
-                    </div>
-
-                    <div class="product-panel">
-                        <span class="product-panel-label">Architecture</span>
-                        <p>Built for APIs, cloud infrastructure, integrations, and future expansion.</p>
-                    </div>
+                    <article class="capability-card">
+                        <div class="capability-icon">OBS</div>
+                        <h3>Observability</h3>
+                        <p>Track events, monitor systems, and understand platform health with operational visibility.
+                        </p>
+                    </article>
                 </div>
             </div>
         </section>
-        <section class="technology">
+
+        <!-- Product Section -->
+        <section class="product-highlight section">
+            <div class="container product-grid">
+                <div class="product-copy">
+                    <span class="section-kicker">Featured Product</span>
+                    <h2>Meet Operra</h2>
+                    <p>
+                        Operra is Ventryx’s modern operations platform built to help businesses manage
+                        workflows, approvals, internal tools, analytics, and automation from one central system.
+                    </p>
+                    <ul class="product-points">
+                        <li>✔ Centralized workflows and approvals</li>
+                        <li>✔ Automation and operational visibility</li>
+                        <li>✔ Scalable architecture for growing teams</li>
+                    </ul>
+                    <a href="products.html" class="btn btn-primary">Explore Operra</a>
+                </div>
+
+                <div class="product-visual">
+                    <div class="operra-preview">
+                        <div class="operra-topbar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="operra-shell">
+                            <aside class="operra-sidebar">
+                                <div class="operra-logo">O</div>
+                                <div class="operra-nav-item active">Dashboard</div>
+                                <div class="operra-nav-item">Workflows</div>
+                                <div class="operra-nav-item">Approvals</div>
+                                <div class="operra-nav-item">Analytics</div>
+                                <div class="operra-nav-item">Settings</div>
+                            </aside>
+
+                            <div class="operra-main">
+                                <div class="operra-header">
+                                    <div>
+                                        <p class="operra-label">OPERATIONS PLATFORM</p>
+                                        <h3>Operra Workspace</h3>
+                                    </div>
+                                    <div class="operra-badge">Live</div>
+                                </div>
+
+                                <div class="operra-stats">
+                                    <div class="operra-stat-card">
+                                        <span>Active Workflows</span>
+                                        <strong>42</strong>
+                                    </div>
+                                    <div class="operra-stat-card">
+                                        <span>Pending Approvals</span>
+                                        <strong>18</strong>
+                                    </div>
+                                    <div class="operra-stat-card">
+                                        <span>Automations Running</span>
+                                        <strong>126</strong>
+                                    </div>
+                                </div>
+
+                                <div class="operra-chart-card">
+                                    <div class="operra-card-header">
+                                        <h4>Operational Activity</h4>
+                                        <span>Last 30 Days</span>
+                                    </div>
+
+                                    <div class="operra-bars">
+                                        <span style="height: 45%;"></span>
+                                        <span style="height: 62%;"></span>
+                                        <span style="height: 58%;"></span>
+                                        <span style="height: 76%;"></span>
+                                        <span style="height: 68%;"></span>
+                                        <span style="height: 88%;"></span>
+                                        <span style="height: 72%;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="operra-table-card">
+                                    <div class="operra-card-header">
+                                        <h4>Recent Workflow Events</h4>
+                                        <span>Updated now</span>
+                                    </div>
+
+                                    <div class="operra-row">
+                                        <span>Invoice Approval Flow</span>
+                                        <strong>Completed</strong>
+                                    </div>
+                                    <div class="operra-row">
+                                        <span>Client Intake Automation</span>
+                                        <strong>Running</strong>
+                                    </div>
+                                    <div class="operra-row">
+                                        <span>Internal Ops Sync</span>
+                                        <strong>Scheduled</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture -->
+        <section class="architecture section">
+            <div class="container">
+                <div class="section-heading center-heading">
+                    <span class="section-kicker">How It Works</span>
+                    <h2>Ventryx connects applications, data, automation, and infrastructure</h2>
+                    <p>
+                        A unified platform approach helps teams move faster while keeping systems secure,
+                        scalable, and easier to manage.
+                    </p>
+                </div>
+
+                <div class="architecture-diagram">
+                    <div class="arch-layer">Applications & Internal Tools</div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-core">Ventryx Core Platform</div>
+                    <div class="arch-grid">
+                        <div class="arch-box">APIs</div>
+                        <div class="arch-box">Auth</div>
+                        <div class="arch-box">Automation</div>
+                        <div class="arch-box">Analytics</div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">Cloud Infrastructure & Data Systems</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section section">
+            <div class="container">
+                <div class="cta-panel">
+                    <div>
+                        <span class="section-kicker">Start Building</span>
+                        <h2>Build with Ventryx today</h2>
+                        <p>
+                            Launch modern systems, streamline operations, and create infrastructure
+                            built for growth.
+                        </p>
+                    </div>
+
+                    <div class="cta-actions">
+                        <a href="contact.html" class="btn btn-primary">Contact Sales</a>
+                        <a href="technology.html" class="btn btn-outline">View Technology</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="developer-section">
+
             <div class="container">
 
-                <div class="technology-header">
-                    <p class="section-label">Technology</p>
+                <span class="section-kicker">DEVELOPER EXPERIENCE</span>
 
-                    <h2>
-                        Built with modern software architecture and scalable infrastructure.
-                    </h2>
+                <h2 class="section-title">
+                    Built for developers
+                </h2>
 
-                    <p class="technology-description">
-                        Ventryx Technologies develops platforms using reliable backend systems,
-                        modern development frameworks, and cloud infrastructure designed for
-                        long-term scalability.
-                    </p>
-                </div>
+                <p class="section-description">
+                    Ventryx provides modern APIs, SDKs, automation tools, and developer
+                    infrastructure so teams can build faster and scale reliably.
+                </p>
 
-                <div class="technology-grid">
+                <div class="developer-grid">
 
-                    <div class="tech-card">
-                        <h3>Backend Systems</h3>
-                        <p>Node.js, TypeScript, and modern API architecture.</p>
-                    </div>
-
-                    <div class="tech-card">
-                        <h3>Data Infrastructure</h3>
-                        <p>PostgreSQL databases and Redis caching for performance.</p>
-                    </div>
-
-                    <div class="tech-card">
-                        <h3>Cloud Platforms</h3>
-                        <p>Scalable cloud hosting and infrastructure services.</p>
-                    </div>
-
-                    <div class="tech-card">
-                        <h3>Developer Tools</h3>
-                        <p>GitHub workflows, containerization, and modern CI/CD pipelines.</p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <section class="vision">
-            <div class="container vision-grid">
-                <div class="vision-content">
-                    <p class="section-label">Our Vision</p>
-                    <h2>Building the software foundations modern businesses will rely on.</h2>
-                    <p class="vision-text">
-                        Ventryx Technologies exists to create scalable platforms, backend systems,
-                        and digital infrastructure that help businesses operate with more clarity,
-                        efficiency, and control.
-                    </p>
-                    <p class="vision-text">
-                        Our long-term vision is to build a growing ecosystem of software products
-                        that support modern operations, connected systems, and the future of business technology.
-                    </p>
-                </div>
-
-                <div class="vision-panel">
-                    <div class="vision-card">
-                        <span class="vision-card-label">Mission</span>
+                    <div class="developer-card">
+                        <div class="dev-icon">API</div>
+                        <h3>Powerful APIs</h3>
                         <p>
-                            Build reliable software platforms that simplify operations and strengthen
-                            digital infrastructure for businesses.
+                            Integrate Ventryx services directly into your applications
+                            with fast, scalable REST APIs.
                         </p>
                     </div>
 
-                    <div class="vision-card">
-                        <span class="vision-card-label">Direction</span>
+                    <div class="developer-card">
+                        <div class="dev-icon">SDK</div>
+                        <h3>SDK Libraries</h3>
                         <p>
-                            Expand from a flagship platform into a broader ecosystem of scalable
-                            products under Ventryx Technologies.
+                            Use official SDKs to integrate Ventryx into your backend,
+                            services, and internal systems.
                         </p>
                     </div>
 
-                    <div class="vision-card">
-                        <span class="vision-card-label">Focus</span>
+                    <div class="developer-card">
+                        <div class="dev-icon">CLI</div>
+                        <h3>CLI Tools</h3>
                         <p>
-                            Platform development, API infrastructure, cloud systems, and long-term
-                            product innovation.
+                            Manage infrastructure, workflows, and platform services
+                            directly from the command line.
                         </p>
                     </div>
+
+                    <div class="developer-card">
+                        <div class="dev-icon">DOCS</div>
+                        <h3>Developer Docs</h3>
+                        <p>
+                            Comprehensive documentation, guides, and examples to help
+                            teams build quickly with Ventryx.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="developer-code">
+                    <pre><code>
+import { Ventryx } from "@ventryx/sdk"
+
+const client = new Ventryx({
+  apiKey: process.env.VENTRYX_API_KEY
+})
+
+await client.workflows.create({
+  name: "Invoice Approval Flow",
+  trigger: "invoice.created"
+})
+</code></pre>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="trust-strip">
+            <div class="container">
+                <p class="trust-label">Trusted by modern software teams</p>
+
+                <div class="trust-logos">
+                    <span>SaaS Teams</span>
+                    <span>Agencies</span>
+                    <span>Startups</span>
+                    <span>Developer Platforms</span>
+                    <span>Internal Tools</span>
+                    <span>Operations Teams</span>
                 </div>
             </div>
         </section>
-        <section class="cta-band">
-            <div class="container cta-band-inner">
-                <div class="cta-band-content">
-                    <p class="section-label">Get In Touch</p>
-                    <h2>Interested in what Ventryx is building?</h2>
-                    <p>
-                        Connect with Ventryx Technologies to learn more about our platforms,
-                        infrastructure, and long-term product vision.
-                    </p>
-                </div>
-
-                <div class="cta-band-actions">
-                    <a href="contact.html" class="btn btn-primary">Contact Ventryx</a>
-                    <a href="products.html" class="btn btn-secondary">Explore Products</a>
-                </div>
-            </div>
-        </section>
-
-        <footer class="site-footer">
-            <div class="container footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">Ventryx Technologies</a>
-                    <p>
-                        Ventryx Technologies LLC builds scalable software platforms,
-                        APIs, and digital infrastructure for modern businesses.
-                    </p>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <a href="about.html">About</a>
-                    <a href="products.html">Products</a>
-                    <a href="technology.html">Technology</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Platform</h4>
-                    <a href="products.html">Operra</a>
-                    <a href="technology.html">Infrastructure</a>
-                    <a href="contact.html">Partnerships</a>
-                </div>
-            </div>
-
-            <div class="container footer-bottom">
-                <p>© 2026 Ventryx Technologies LLC. All rights reserved.</p>
-            </div>
-        </footer>
     </main>
 
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <!-- Company -->
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <span class="brand-mark">V</span>
+                    <span class="brand-text">Ventryx</span>
+                </div>
+
+                <p class="footer-description">
+                    Ventryx Technologies builds modern infrastructure, APIs,
+                    automation platforms, and digital systems for modern businesses.
+                </p>
+            </div>
+
+            <!-- Platform -->
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#">APIs</a></li>
+                    <li><a href="#">Authentication</a></li>
+                    <li><a href="#">Automation</a></li>
+                    <li><a href="#">Data Pipelines</a></li>
+                    <li><a href="#">Infrastructure</a></li>
+                </ul>
+            </div>
+
+            <!-- Products -->
+            <div class="footer-col">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#">Operra Platform</a></li>
+                    <li><a href="#">Workflows</a></li>
+                    <li><a href="#">Approvals</a></li>
+                    <li><a href="#">Analytics</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">API Reference</a></li>
+                    <li><a href="#">Developer Guides</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Ventryx Technologies LLC. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
