@@ -1,0 +1,633 @@
+/* =========================================================
+   PRICING PAGE
+   ========================================================= */
+
+.pricing-page {
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 18% 14%, rgba(37, 99, 235, 0.16), transparent 30%),
+        radial-gradient(circle at 84% 22%, rgba(56, 189, 248, 0.12), transparent 24%),
+        radial-gradient(circle at 52% 82%, rgba(37, 99, 235, 0.08), transparent 30%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.pricing-page>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   SHARED SECTION SPACING
+   ========================================================= */
+
+.pricing-hero.section {
+    padding: 128px 0 76px;
+}
+
+.pricing-tiers.section {
+    padding: 0 0 88px;
+}
+
+.pricing-comparison.section {
+    padding: 8px 0 92px;
+}
+
+.pricing-faq.section {
+    padding: 0 0 60px;
+}
+
+.pricing-cta.section {
+    padding: 56px 0 96px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.pricing-hero-heading {
+    max-width: 860px;
+}
+
+.pricing-hero-heading h1 {
+    margin: 0 0 18px;
+    color: #f8fbff;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+}
+
+.pricing-hero-heading p {
+    margin: 0;
+    max-width: 68ch;
+    color: #c8d4e3;
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+/* =========================================================
+   HEADER FIXES FOR PRICING PAGE
+   Makes the navbar feel consistent with the rest of the site
+   ========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.topbar {
+    border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+    background: rgba(248, 250, 252, 0.8);
+}
+
+.topbar-inner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 42px;
+}
+
+.topbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.topbar-nav a {
+    color: #475569;
+    font-size: 0.92rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.topbar-nav a:hover {
+    color: #0f172a;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    min-height: 86px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #0f172a;
+    font-weight: 700;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    color: #ffffff;
+    font-weight: 800;
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    box-shadow: 0 10px 24px rgba(59, 130, 246, 0.24);
+}
+
+.brand-text {
+    color: #0f172a;
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.site-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav a {
+    color: #334155;
+    font-size: 0.98rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+    color: #2563eb;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   PRICING GRID
+   ========================================================= */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 32px 28px;
+    background: linear-gradient(180deg, rgba(24, 35, 58, 0.88), rgba(13, 20, 37, 0.94));
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 24px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+}
+
+.pricing-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,
+            rgba(125, 211, 252, 0.55),
+            rgba(59, 130, 246, 0),
+            rgba(59, 130, 246, 0));
+    opacity: 0.8;
+}
+
+.pricing-card-free {
+    border-color: rgba(255, 255, 255, 0.09);
+}
+
+.pricing-card-featured {
+    border-color: rgba(96, 165, 250, 0.24);
+    box-shadow: 0 22px 56px rgba(0, 0, 0, 0.24);
+    transform: translateY(-6px);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 7px 12px;
+    color: #dff4ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: rgba(59, 130, 246, 0.18);
+    border: 1px solid rgba(125, 211, 252, 0.18);
+    border-radius: 999px;
+}
+
+.pricing-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #9bd8ff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.pricing-card-top h2 {
+    margin: 0 0 12px;
+    color: #f8fbff;
+    font-size: 1.6rem;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+}
+
+.pricing-card-top p {
+    margin: 0;
+    color: #c8d4e3;
+    line-height: 1.75;
+}
+
+.pricing-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin: 28px 0 24px;
+}
+
+.price {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.price.custom {
+    font-size: 2.4rem;
+}
+
+.price-term {
+    color: #9fb0c7;
+    font-size: 1rem;
+}
+
+.pricing-features {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pricing-features li {
+    position: relative;
+    padding-left: 24px;
+    color: #e5edf7;
+    line-height: 1.7;
+}
+
+.pricing-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #9bd8ff;
+    font-weight: 800;
+}
+
+.pricing-actions {
+    margin-top: 28px;
+}
+
+/* =========================================================
+   COMPARISON TABLE
+   ========================================================= */
+
+.comparison-table-wrap {
+    overflow-x: auto;
+    margin-top: 28px;
+    background: linear-gradient(180deg, rgba(19, 28, 49, 0.92), rgba(10, 16, 30, 0.96));
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 24px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+}
+
+.comparison-table {
+    width: 100%;
+    min-width: 920px;
+    border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.comparison-table th {
+    color: #f8fbff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.comparison-table td {
+    color: #c8d4e3;
+    line-height: 1.6;
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.faq-card {
+    padding: 28px 24px;
+    background: linear-gradient(180deg, rgba(24, 35, 58, 0.88), rgba(13, 20, 37, 0.94));
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 22px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+}
+
+.faq-card h3 {
+    margin: 0 0 12px;
+    color: #f8fbff;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.faq-card p {
+    margin: 0;
+    color: #c8d4e3;
+    line-height: 1.75;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.pricing-cta.section {
+    padding-top: 108px;
+    padding-bottom: 96px;
+}
+
+.pricing-cta-box {
+    margin-top: 18px;
+    padding: 40px 36px;
+    background: linear-gradient(180deg, rgba(19, 28, 49, 0.92), rgba(10, 16, 30, 0.96));
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 28px;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.22);
+}
+
+.pricing-cta-box h2 {
+    margin: 0 0 14px;
+    color: #f8fbff;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+}
+
+.pricing-cta-box p {
+    margin: 0;
+    max-width: 62ch;
+    color: #c8d4e3;
+    line-height: 1.8;
+}
+
+.pricing-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    padding: 80px 0 40px;
+    color: #cbd5e1;
+    background: #020617;
+    border-top: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-brand .brand-mark {
+    color: #ffffff;
+    background: linear-gradient(135deg, #3b82f6, #7c3aed);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+}
+
+.footer-brand .brand-text {
+    color: #f8fafc;
+    font-weight: 700;
+}
+
+.footer-description {
+    max-width: 320px;
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-col h4 {
+    margin: 0 0 14px;
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+.footer-col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #cbd5e1;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 20px;
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pricing-card-featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header-inner {
+        gap: 20px;
+    }
+
+    .nav-list {
+        gap: 22px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 980px) {
+
+    .faq-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        display: none;
+    }
+
+    .header-inner {
+        min-height: 78px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .site-nav {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        padding-bottom: 16px;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        gap: 16px 22px;
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 760px) {
+    .pricing-hero.section {
+        padding: 110px 0 64px;
+    }
+
+    .pricing-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card,
+    .faq-card,
+    .pricing-cta-box {
+        padding: 24px 20px;
+        border-radius: 20px;
+    }
+
+    .pricing-hero-heading h1 {
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    .comparison-table {
+        min-width: 820px;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .brand-text {
+        font-size: 1.28rem;
+    }
+
+    .site-footer {
+        padding: 64px 0 32px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+    }
+}

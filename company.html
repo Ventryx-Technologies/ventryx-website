@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Ventryx Technologies</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/pages/contact.css" />
+    <title>Company | Ventryx Technologies</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/pages/company.css" />
 </head>
 
 <body>
- <header class="site-header">
+    <header class="site-header">
         <!-- Utility Bar -->
         <div class="utility-bar">
             <div class="container utility-bar-inner">
@@ -320,139 +324,392 @@
         </div>
     </header>
 
-
-    <main>
-        <section class="contact-hero">
-            <div class="container">
-                <p class="section-label">Contact</p>
-                <h1>Connect with Ventryx Technologies.</h1>
-                <p class="contact-hero-text">
-                    Reach out to learn more about Ventryx Technologies, Operra,
-                    platform development, infrastructure, or future opportunities.
-                </p>
-            </div>
-        </section>
-
-        <section class="contact-section">
-            <div class="container contact-grid">
-                <div class="contact-info">
-                    <h2>Let’s start a conversation.</h2>
+    <main class="company-page">
+        <!-- Hero -->
+        <section class="company-hero section">
+            <div class="container company-hero-grid">
+                <div class="company-hero-copy">
+                    <span class="section-kicker">Company</span>
+                    <h1>Building the operational infrastructure modern businesses need</h1>
                     <p>
-                        We’re building scalable software platforms, infrastructure systems,
-                        and long-term technology products for modern business operations.
-                    </p>
-                    <p>
-                        For product inquiries, partnerships, or general company questions,
-                        use the contact form and we’ll get back to you.
+                        Ventryx Technologies builds software platforms, APIs, workflow systems,
+                        and internal infrastructure that help organizations operate with more
+                        structure, visibility, and scale.
                     </p>
 
-                    <div class="contact-details">
-                        <div class="contact-detail-card">
-                            <span class="detail-label">Company</span>
-                            <p>Ventryx Technologies LLC</p>
-                        </div>
-
-                        <div class="contact-detail-card">
-                            <span class="detail-label">Flagship Platform</span>
-                            <p>Operra</p>
-                        </div>
-
-                        <div class="contact-detail-card">
-                            <span class="detail-label">Focus</span>
-                            <p>Software Platforms & Infrastructure</p>
-                        </div>
+                    <div class="company-hero-actions">
+                        <a href="contact.html" class="btn btn-primary">Talk to Ventryx</a>
+                        <a href="products.html" class="btn btn-outline">Explore Products</a>
                     </div>
                 </div>
 
-                <div class="contact-form-card">
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" />
+                <div class="company-hero-panel">
+                    <div class="company-hero-surface">
+                        <div class="surface-row surface-row-lg">
+                            <span>Infrastructure</span>
+                            <span>APIs</span>
+                            <span>Automation</span>
                         </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="you@example.com" />
+                        <div class="surface-core">Ventryx Technologies</div>
+                        <div class="surface-grid">
+                            <div class="surface-box">Internal Platforms</div>
+                            <div class="surface-box">Operational Systems</div>
+                            <div class="surface-box">Workflow Architecture</div>
+                            <div class="surface-box">Product Infrastructure</div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" name="company" placeholder="Company name" />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="6"
-                                placeholder="Tell us about your inquiry"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary submit-btn">
-                            Send Message
-                        </button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
-        <footer class="site-footer">
+
+        <!-- Overview -->
+        <section class="company-overview section">
             <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-col footer-brand-col">
-                        <div class="footer-brand">
-                            <span class="brand-mark">V</span>
-                            <span class="brand-text">Ventryx</span>
-                        </div>
-                        <p class="footer-description">
-                            Ventryx Technologies builds modern infrastructure, APIs, automation
-                            platforms, and digital systems for modern businesses.
+                <div class="section-heading">
+                    <span class="section-kicker">Overview</span>
+                    <h2>A technology company focused on systems, execution, and scale</h2>
+                    <p>
+                        Ventryx is positioned to build the foundational software and operational
+                        systems businesses need as they grow. From internal tools and automation
+                        platforms to customer-facing product infrastructure, the company is focused
+                        on creating technology that helps organizations run more effectively.
+                    </p>
+                </div>
+
+                <div class="company-overview-grid">
+                    <article class="company-card">
+                        <h3>What we do</h3>
+                        <p>
+                            We design and build software platforms, APIs, workflow engines,
+                            internal systems, and modern digital infrastructure.
                         </p>
-                    </div>
+                    </article>
 
-                    <div class="footer-col">
-                        <h4>Platform</h4>
-                        <ul>
-                            <li><a href="platform.html">Platform</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
-                            <li><a href="contact.html">Get Started</a></li>
-                        </ul>
-                    </div>
+                    <article class="company-card">
+                        <h3>Who we serve</h3>
+                        <p>
+                            We support modern businesses, software companies, and growing teams
+                            that need stronger execution systems and scalable operational foundations.
+                        </p>
+                    </article>
 
-                    <div class="footer-col">
-                        <h4>Products</h4>
-                        <ul>
-                            <li><a href="operra.html">Operra Platform</a></li>
-                            <li><a href="operra.html">Workflows</a></li>
-                            <li><a href="operra.html">Approvals</a></li>
-                            <li><a href="operra.html">Analytics</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-col">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="docs.html">Documentation</a></li>
-                            <li><a href="docs.html">API Reference</a></li>
-                            <li><a href="docs.html">Developer Guides</a></li>
-                            <li><a href="support.html">Support</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-col">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="company.html">About</a></li>
-                            <li><a href="technology.html">Technology</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="footer-bottom">
-                    <p>© 2026 Ventryx Technologies LLC. All rights reserved.</p>
+                    <article class="company-card">
+                        <h3>How we think</h3>
+                        <p>
+                            We focus on clarity, structure, product quality, and operational usefulness
+                            so the systems we build support real business outcomes.
+                        </p>
+                    </article>
                 </div>
             </div>
-        </footer>
+        </section>
+
+        <!-- Mission / Vision -->
+        <section class="company-mission section">
+            <div class="container">
+                <div class="mission-grid">
+                    <article class="mission-card">
+                        <span class="section-kicker">Mission</span>
+                        <h2>To help organizations operate with better systems</h2>
+                        <p>
+                            Ventryx exists to build the software infrastructure that helps businesses
+                            reduce friction, improve visibility, and scale operations with confidence.
+                        </p>
+                    </article>
+
+                    <article class="mission-card">
+                        <span class="section-kicker">Vision</span>
+                        <h2>To become a trusted builder of modern business infrastructure</h2>
+                        <p>
+                            Our long-term vision is to create platforms and systems that power the
+                            next generation of digital operations, internal execution, and product-scale growth.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Build -->
+        <section class="company-builds section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">What We Build</span>
+                    <h2>Focused on practical software and operational systems</h2>
+                    <p>
+                        Ventryx is building a portfolio of technology offerings designed to help
+                        businesses improve execution, simplify internal complexity, and create more
+                        scalable digital infrastructure.
+                    </p>
+                </div>
+
+                <div class="builds-grid">
+                    <article class="build-card">
+                        <div class="build-icon">01</div>
+                        <h3>Software Platforms</h3>
+                        <p>
+                            Product platforms designed to help teams manage operations, processes,
+                            and digital workflows in one structured environment.
+                        </p>
+                    </article>
+
+                    <article class="build-card">
+                        <div class="build-icon">02</div>
+                        <h3>APIs & Infrastructure</h3>
+                        <p>
+                            Backend systems, service layers, and platform foundations built for
+                            integration, performance, and long-term scalability.
+                        </p>
+                    </article>
+
+                    <article class="build-card">
+                        <div class="build-icon">03</div>
+                        <h3>Workflow & Automation Systems</h3>
+                        <p>
+                            Internal systems that help businesses standardize approvals, automate
+                            repeatable work, and improve operational visibility.
+                        </p>
+                    </article>
+
+                    <article class="build-card">
+                        <div class="build-icon">04</div>
+                        <h3>Digital Business Systems</h3>
+                        <p>
+                            Tools and systems that support growth across execution, coordination,
+                            reporting, and process management.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Ventryx Stack -->
+        <section class="company-stack section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">The Ventryx Stack</span>
+                    <h2>Built across the layers modern software companies rely on</h2>
+                    <p>
+                        Ventryx is focused on building connected systems across product,
+                        infrastructure, automation, data, and internal operations so businesses
+                        can move with more clarity, reliability, and scale.
+                    </p>
+                </div>
+
+                <div class="stack-shell">
+                    <div class="stack-layer stack-layer-top">
+                        Product Experience, Internal Tools, and Business Workflows
+                    </div>
+
+                    <div class="stack-arrow">↓</div>
+
+                    <div class="stack-layer stack-layer-core">
+                        Ventryx Platform Layer
+                    </div>
+
+                    <div class="stack-grid">
+                        <div class="stack-card">
+                            <span class="stack-card-kicker">Applications</span>
+                            <h3>Product Systems</h3>
+                            <p>
+                                Customer-facing platforms, internal portals, and structured
+                                digital workflows built for clarity and execution.
+                            </p>
+                        </div>
+
+                        <div class="stack-card">
+                            <span class="stack-card-kicker">Logic</span>
+                            <h3>APIs & Services</h3>
+                            <p>
+                                Service layers and backend APIs that connect products,
+                                workflows, data, and operational actions.
+                            </p>
+                        </div>
+
+                        <div class="stack-card">
+                            <span class="stack-card-kicker">Automation</span>
+                            <h3>Workflow Engines</h3>
+                            <p>
+                                Systems for approvals, automation rules, notifications,
+                                and repeatable business process execution.
+                            </p>
+                        </div>
+
+                        <div class="stack-card">
+                            <span class="stack-card-kicker">Infrastructure</span>
+                            <h3>Cloud Foundations</h3>
+                            <p>
+                                Scalable hosting, system architecture, deployment pipelines,
+                                and platform infrastructure for long-term growth.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="stack-arrow">↓</div>
+
+                    <div class="stack-layer stack-layer-bottom">
+                        Data, Integrations, Observability, Security, and Operational Foundations
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder -->
+        <section class="company-founder section">
+            <div class="container">
+                <div class="founder-grid">
+
+                    <!-- Founder Photo -->
+                    <div class="founder-photo">
+                        <img src="assets/img/corey-founder.jpeg" alt="Corey, Founder of Ventryx Technologies"
+                            class="founder-image" />
+                    </div>
+
+                    <!-- Founder Content -->
+                    <div class="founder-copy">
+                        <span class="section-kicker">Leadership</span>
+
+                        <h2>Founder-led by a builder focused on modern software systems</h2>
+
+                        <p>
+                            Ventryx Technologies is being built with a strong focus on
+                            software engineering, operational systems, and modern
+                            digital infrastructure. The company is rooted in the belief
+                            that great businesses require strong systems, reliable
+                            platforms, and thoughtful technology architecture behind
+                            them.
+                        </p>
+
+                        <p>
+                            The goal of Ventryx is to design and build software platforms,
+                            APIs, and operational systems that help organizations improve
+                            execution, automate internal processes, and scale their
+                            technology foundations.
+                        </p>
+
+                        <div class="founder-panel">
+                            <span class="founder-role">Founder & Software Engineer</span>
+                            <h3>Corey</h3>
+                            Software builder focused on modern platforms, operational systems, infrastructure
+                            architecture, and long-term product development.
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="company-values section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">Values</span>
+                    <h2>Principles that shape how Ventryx builds</h2>
+                </div>
+
+                <div class="values-grid">
+                    <article class="value-card">
+                        <h3>Clarity</h3>
+                        <p>We value software and systems that make work easier to understand and manage.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <h3>Structure</h3>
+                        <p>We believe disciplined architecture and clear process design create better outcomes.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <h3>Execution</h3>
+                        <p>We care about building systems that help businesses move from ideas into repeatable action.
+                        </p>
+                    </article>
+
+                    <article class="value-card">
+                        <h3>Scale</h3>
+                        <p>We build with growth in mind so the foundation can support future expansion.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="company-cta section">
+            <div class="container">
+                <div class="company-cta-box">
+                    <span class="section-kicker">Get Started</span>
+                    <h2>Looking to work with Ventryx Technologies?</h2>
+                    <p>
+                        Connect with us to learn more about our products, platform direction,
+                        and how Ventryx can support your business with modern digital systems.
+                    </p>
+
+                    <div class="company-cta-actions">
+                        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                        <a href="pricing.html" class="btn btn-outline">View Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand-col">
+                    <div class="footer-brand">
+                        <span class="brand-mark">V</span>
+                        <span class="brand-text">Ventryx</span>
+                    </div>
+                    <p class="footer-description">
+                        Ventryx Technologies builds modern infrastructure, APIs, automation
+                        platforms, and digital systems for modern businesses.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="platform.html">Platform</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Get Started</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="operra.html">Operra Platform</a></li>
+                        <li><a href="operra.html">Workflows</a></li>
+                        <li><a href="operra.html">Approvals</a></li>
+                        <li><a href="operra.html">Analytics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="docs.html">Documentation</a></li>
+                        <li><a href="docs.html">API Reference</a></li>
+                        <li><a href="docs.html">Developer Guides</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="company.html">About</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Ventryx Technologies LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
