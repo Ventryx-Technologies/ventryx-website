@@ -5,10 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products | Ventryx Technologies</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/products.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/pages/products.css" />
 </head>
 
 <body>
@@ -16,7 +20,7 @@
         <div class="container header-inner">
             <a href="index.html" class="logo">Ventryx</a>
 
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="Primary">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="products.html" class="active">Products</a>
@@ -63,6 +67,8 @@
                                 <p>Operations, automation, APIs, and connected systems</p>
                             </div>
                         </div>
+
+                        <a href="operra.html" class="btn btn-primary">View Operra</a>
                     </article>
 
                     <article class="product-card future-card">
@@ -85,37 +91,38 @@
                 </div>
             </div>
         </section>
-        <footer class="site-footer">
-            <div class="container footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">Ventryx Technologies</a>
-                    <p>
-                        Ventryx Technologies LLC builds scalable software platforms,
-                        APIs, and digital infrastructure for modern businesses.
-                    </p>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <a href="about.html">About</a>
-                    <a href="products.html">Products</a>
-                    <a href="technology.html">Technology</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Platform</h4>
-                    <a href="products.html">Operra</a>
-                    <a href="technology.html">Infrastructure</a>
-                    <a href="contact.html">Partnerships</a>
-                </div>
-            </div>
-
-            <div class="container footer-bottom">
-                <p>© 2026 Ventryx Technologies LLC. All rights reserved.</p>
-            </div>
-        </footer>
     </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">Ventryx Technologies</a>
+                <p>
+                    Ventryx Technologies LLC builds scalable software platforms,
+                    APIs, and digital infrastructure for modern businesses.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="technology.html">Technology</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <a href="operra.html">Operra</a>
+                <a href="technology.html">Infrastructure</a>
+                <a href="contact.html">Partnerships</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Ventryx Technologies LLC. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

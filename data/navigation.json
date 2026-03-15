@@ -1,0 +1,24 @@
+{
+    "main": [
+        {
+            "label": "Platform",
+            "url": "/platform"
+        },
+        {
+            "label": "Products",
+            "url": "/products"
+        },
+        {
+            "label": "Solutions",
+            "url": "/solutions"
+        },
+        {
+            "label": "Resources",
+            "url": "/resources"
+        },
+        {
+            "label": "Company",
+            "url": "/about"
+        }
+    ]
+}

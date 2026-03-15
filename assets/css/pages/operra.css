@@ -1,0 +1,806 @@
+/* =========================================================
+   OPERRA PAGE
+   Clean, professional styling for the Operra product page
+   ========================================================= */
+
+/* =========================================================
+   PAGE FOUNDATION
+   ========================================================= */
+
+.operra-page {
+    position: relative;
+    overflow: hidden;
+}
+
+.operra-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 18% 16%, rgba(37, 99, 235, 0.16), transparent 30%),
+        radial-gradient(circle at 82% 22%, rgba(56, 189, 248, 0.12), transparent 26%),
+        radial-gradient(circle at 50% 82%, rgba(37, 99, 235, 0.10), transparent 28%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.operra-page>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   SECTION LAYOUT
+   ========================================================= */
+
+.section {
+    padding: 88px 0;
+}
+
+.operra-hero {
+    padding: 112px 0 120px;
+}
+
+
+.operra-hero.section {
+    padding: 80px 0 120px;
+}
+
+.operra-overview.section {
+    padding: 72px 0 72px;
+}
+
+.operra-capabilities.section {
+    padding: 68px 0 80px;
+}
+
+.operra-architecture.section {
+    padding: 74px 0 84px;
+}
+
+.operra-preview.section {
+    padding: 78px 0;
+}
+
+.operra-cta.section {
+    padding: 42px 0 88px;
+}
+
+.section-heading {
+    max-width: 860px;
+    margin-bottom: 34px;
+}
+
+.center-heading {
+    max-width: 760px;
+}
+
+.section-kicker {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #9bd8ff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.section-heading h2 {
+    margin: 0 0 14px;
+    color: #f8fbff;
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+}
+
+.section-heading p {
+    margin: 0;
+    max-width: 74ch;
+    color: #c8d4e3;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+/* =========================================================
+   SURFACE UTILITIES
+   ========================================================= */
+
+.overview-card,
+.use-case-card,
+.capability-card,
+.preview-surface-card,
+.operra-dashboard,
+.architecture-stack {
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+}
+
+.overview-card,
+.use-case-card,
+.capability-card {
+    background: linear-gradient(180deg, rgba(24, 35, 58, 0.88), rgba(13, 20, 37, 0.94));
+}
+
+.preview-surface-card,
+.operra-dashboard {
+    background: linear-gradient(180deg, rgba(7, 16, 32, 0.92), rgba(10, 18, 34, 0.96));
+}
+
+.overview-card,
+.use-case-card,
+.capability-card,
+.preview-surface-card {
+    border-radius: 22px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.operra-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.operra-hero-content h1 {
+    margin: 18px 0 22px;
+    max-width: 12ch;
+    color: #f8fbff;
+    font-size: clamp(2.8rem, 5vw, 4.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+}
+
+.operra-hero-text {
+    max-width: 62ch;
+    color: #c8d4e3;
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.operra-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.operra-hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 34px;
+}
+
+.hero-metric-card {
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+}
+
+.metric-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #7dd3fc;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-metric-card strong {
+    display: block;
+    color: #f7fbff;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.operra-hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.operra-dashboard {
+    width: 100%;
+    max-width: 560px;
+    padding: 18px;
+    border-radius: 24px;
+}
+
+.operra-dashboard-topbar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.operra-dashboard-topbar span {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.operra-dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.dashboard-kicker {
+    margin-bottom: 6px;
+    color: #7dd3fc;
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.operra-dashboard-header h3 {
+    margin: 0;
+    color: #f8fbff;
+    font-size: 1.45rem;
+    line-height: 1.2;
+}
+
+.dashboard-status {
+    padding: 8px 12px;
+    color: #b6f3c8;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: rgba(34, 197, 94, 0.14);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 999px;
+}
+
+.operra-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.dashboard-stat {
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+}
+
+.dashboard-stat p {
+    margin: 0 0 8px;
+    color: #9fb0c7;
+    font-size: 0.92rem;
+}
+
+.dashboard-stat strong {
+    color: #ffffff;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+.operra-dashboard-panel {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+}
+
+.dashboard-panel-header,
+.surface-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.dashboard-panel-header h4,
+.surface-header h3 {
+    margin: 0;
+    color: #f8fbff;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.dashboard-panel-header span,
+.surface-header span {
+    color: #9fb0c7;
+    font-size: 0.88rem;
+}
+
+.dashboard-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dashboard-row:first-of-type {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.dashboard-row span {
+    color: #d5deea;
+}
+
+.dashboard-row strong {
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 26px;
+}
+
+.overview-card {
+    min-height: 100%;
+    padding: 30px 28px;
+}
+
+.overview-card h3 {
+    margin: 0 0 14px;
+    color: #f7fbff;
+    font-size: 1.72rem;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+}
+
+.overview-card p {
+    margin: 0;
+    color: #c7d3e2;
+    font-size: 1.02rem;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   CAPABILITIES
+   ========================================================= */
+
+.operra-capabilities .section-heading {
+    margin-bottom: 26px;
+}
+
+.operra-capabilities .section-heading p {
+    max-width: 62ch;
+}
+
+.capabilities-grid,
+.operra-capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.capability-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 28px 26px 26px;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.capability-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,
+            rgba(96, 165, 250, 0.55),
+            rgba(59, 130, 246, 0),
+            rgba(59, 130, 246, 0));
+    opacity: 0.85;
+}
+
+.capability-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(125, 211, 252, 0.18);
+    box-shadow: 0 22px 54px rgba(0, 0, 0, 0.24);
+}
+
+.capability-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    min-width: 58px;
+    height: 34px;
+    padding: 0 12px;
+    color: #8fd8ff;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    background: rgba(59, 130, 246, 0.14);
+    border: 1px solid rgba(125, 211, 252, 0.16);
+    border-radius: 999px;
+}
+
+.capability-card h3 {
+    margin: 0;
+    color: #f8fbff;
+    font-size: 1.55rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.capability-card p {
+    margin: 0;
+    max-width: 40ch;
+    color: #c8d4e3;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   ARCHITECTURE
+   ========================================================= */
+
+.architecture-stack {
+    max-width: 960px;
+    margin: 34px auto 0;
+    padding: 34px;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(19, 28, 49, 0.92), rgba(10, 16, 30, 0.96));
+    border-radius: 28px;
+}
+
+.architecture-layer,
+.architecture-core {
+    padding: 20px 24px;
+    font-weight: 700;
+    border-radius: 18px;
+}
+
+.architecture-layer {
+    color: #dce6f2;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.architecture-core {
+    color: #ffffff;
+    font-size: 1.12rem;
+    background: linear-gradient(180deg, rgba(77, 112, 201, 0.45), rgba(52, 77, 138, 0.34));
+}
+
+.architecture-arrow {
+    margin: 18px 0;
+    color: #7dd3fc;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.architecture-core-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 22px 0;
+}
+
+.architecture-box {
+    padding: 18px;
+    color: #e2ebf7;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+}
+
+/* =========================================================
+   PREVIEW / PRODUCT EXPERIENCE
+   ========================================================= */
+
+.operra-preview-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 42px;
+    align-items: center;
+}
+
+.preview-copy h2 {
+    margin-bottom: 16px;
+}
+
+.preview-copy p {
+    max-width: 58ch;
+    color: #c8d4e3;
+    line-height: 1.8;
+}
+
+.preview-points {
+    display: grid;
+    gap: 14px;
+    margin: 28px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.preview-points li {
+    position: relative;
+    padding-left: 22px;
+    color: #e5edf7;
+    line-height: 1.7;
+}
+
+.preview-points li::before {
+    content: "✓";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #9bd8ff;
+    font-weight: 800;
+}
+
+.preview-surface-card {
+    padding: 24px;
+}
+
+.surface-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    height: 210px;
+    margin: 24px 0 28px;
+    padding: 18px 8px 6px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+}
+
+.surface-chart span {
+    flex: 1;
+    background: linear-gradient(180deg, #60a5fa 0%, #2563eb 100%);
+    border-radius: 999px 999px 10px 10px;
+}
+
+.surface-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.surface-summary-card {
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+}
+
+.surface-summary-card p {
+    margin: 0 0 8px;
+    color: #9fb0c7;
+    font-size: 0.9rem;
+}
+
+.surface-summary-card strong {
+    color: #ffffff;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+/* =========================================================
+   USE CASES
+   ========================================================= */
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 26px;
+}
+
+.use-case-card {
+    min-height: 100%;
+    padding: 30px 28px;
+}
+
+.use-case-card h3 {
+    margin: 0 0 14px;
+    color: #f7fbff;
+    font-size: 1.72rem;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+}
+
+.use-case-card p {
+    margin: 0;
+    color: #c7d3e2;
+    font-size: 1.02rem;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.operra-cta .section-heading {
+    margin-bottom: 22px;
+}
+
+.operra-cta-actions,
+.operra-btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 22px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    padding: 80px 0 40px;
+    color: #cbd5e1;
+    background: #020617;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-brand .brand-mark {
+    color: #ffffff;
+    background: linear-gradient(135deg, #3b82f6, #7c3aed);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+}
+
+.footer-brand .brand-text {
+    color: #f8fafc;
+    font-weight: 700;
+}
+
+.footer-description {
+    max-width: 320px;
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-col h4 {
+    margin: 0 0 14px;
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+.footer-col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #cbd5e1;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 20px;
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .operra-hero-grid,
+    .operra-preview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .operra-hero-content h1 {
+        max-width: none;
+    }
+}
+
+@media (max-width: 980px) {
+
+    .overview-grid,
+    .use-cases-grid,
+    .capabilities-grid,
+    .operra-capabilities-grid,
+    .architecture-core-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .operra-hero-metrics,
+    .surface-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .capability-card p {
+        max-width: none;
+    }
+
+    .footer-grid {
+        gap: 28px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .section,
+    .operra-overview.section,
+    .operra-capabilities.section,
+    .operra-architecture.section,
+    .operra-preview.section,
+    .operra-cta.section {
+        padding: 64px 0;
+    }
+
+    .operra-hero.section {
+        padding: 56px 0 90px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(1.8rem, 7vw, 2.45rem);
+    }
+
+    .operra-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-card,
+    .use-case-card,
+    .capability-card,
+    .preview-surface-card,
+    .architecture-stack {
+        padding: 22px 18px;
+        border-radius: 20px;
+    }
+
+    .operra-dashboard-header,
+    .dashboard-panel-header,
+    .surface-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .architecture-stack {
+        padding: 24px;
+    }
+}
