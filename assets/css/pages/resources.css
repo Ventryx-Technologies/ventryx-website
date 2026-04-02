@@ -1,0 +1,311 @@
+/* =========================================================
+   RESOURCES PAGE
+   ========================================================= */
+
+.resources-page {
+    position: relative;
+    overflow: hidden;
+}
+
+.resources-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 8%, rgba(37, 99, 235, 0.12), transparent 26%),
+        radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.10), transparent 22%),
+        radial-gradient(circle at 48% 80%, rgba(37, 99, 235, 0.06), transparent 28%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.resources-page > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.resources-hero {
+    padding: 80px 0 48px;
+    text-align: center;
+}
+
+.resources-hero-inner {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.resources-hero h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.15;
+    margin: 12px 0 20px;
+}
+
+.resources-hero p {
+    font-size: 1.05rem;
+    color: #475569;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* =========================================================
+   QUICK LINKS
+   ========================================================= */
+
+.quicklinks-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.quicklink-card {
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    position: relative;
+}
+
+.quicklink-card:hover {
+    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.09);
+    transform: translateY(-2px);
+}
+
+.quicklink-icon {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    padding: 4px 9px;
+    border-radius: 5px;
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 14px;
+}
+
+.quicklink-card h3 {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 8px;
+}
+
+.quicklink-card p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0 0 16px;
+    flex: 1;
+}
+
+.quicklink-arrow {
+    font-size: 0.9rem;
+    color: #2563eb;
+    font-weight: 600;
+    margin-top: auto;
+}
+
+/* =========================================================
+   DEVELOPER RESOURCES
+   ========================================================= */
+
+.dev-resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.dev-resource-card {
+    background: #f8fafc;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+    border-radius: 12px;
+    padding: 28px 24px;
+    transition: box-shadow 0.2s ease;
+}
+
+.dev-resource-card:hover {
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+}
+
+.dev-resource-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.dev-resource-icon {
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    padding: 4px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.dev-resource-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.dev-resource-card p {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.65;
+    margin: 0 0 16px;
+}
+
+.resource-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.resource-link:hover {
+    color: #1d4ed8;
+}
+
+/* =========================================================
+   LEARN
+   ========================================================= */
+
+.learn-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.learn-card {
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 12px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.learn-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.07);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    padding: 3px 9px;
+    border-radius: 4px;
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 14px;
+}
+
+.learn-card h3 {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.4;
+    margin: 0 0 10px;
+}
+
+.learn-card p {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.65;
+    margin: 0 0 18px;
+    flex: 1;
+}
+
+/* =========================================================
+   SUPPORT STRIP
+   ========================================================= */
+
+.support-strip {
+    background: #f1f5f9;
+    border: 1px solid rgba(15, 23, 42, 0.07);
+    border-radius: 14px;
+    padding: 40px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.support-strip-copy h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 6px;
+}
+
+.support-strip-copy p {
+    font-size: 0.9rem;
+    color: #475569;
+    margin: 0;
+    max-width: 480px;
+    line-height: 1.6;
+}
+
+.support-strip-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+    .quicklinks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .dev-resources-grid,
+    .learn-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .support-strip {
+        flex-direction: column;
+        text-align: center;
+        padding: 36px 28px;
+    }
+
+    .support-strip-copy p {
+        max-width: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .quicklinks-grid,
+    .dev-resources-grid,
+    .learn-grid {
+        grid-template-columns: 1fr;
+    }
+}

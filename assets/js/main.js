@@ -3,12 +3,36 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileMenu = document.querySelector(".mobile-menu");
     const navItems = document.querySelectorAll(".has-mega-menu");
 
+    function setMegaMenuState(item, isOpen) {
+        item.classList.toggle("open", isOpen);
+
+        const trigger = item.querySelector(".nav-trigger");
+        if (trigger) {
+            trigger.setAttribute("aria-expanded", String(isOpen));
+        }
+    }
+
+    function closeAllMegaMenus() {
+        navItems.forEach(function (item) {
+            setMegaMenuState(item, false);
+        });
+    }
+
+    function setMobileMenuState(isOpen) {
+        if (!mobileMenu || !mobileToggle) return;
+
+        mobileMenu.classList.toggle("show", isOpen);
+        mobileToggle.setAttribute("aria-expanded", String(isOpen));
+        mobileToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    }
+
     /* =========================
        MOBILE MENU TOGGLE
     ========================= */
     if (mobileToggle && mobileMenu) {
+        mobileToggle.setAttribute("aria-expanded", "false");
         mobileToggle.addEventListener("click", function () {
-            mobileMenu.classList.toggle("show");
+            setMobileMenuState(!mobileMenu.classList.contains("show"));
         });
     }
 
@@ -26,12 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const isOpen = item.classList.contains("open");
 
-                navItems.forEach((otherItem) => {
-                    otherItem.classList.remove("open");
-                });
+                closeAllMegaMenus();
 
                 if (!isOpen) {
-                    item.classList.add("open");
+                    setMegaMenuState(item, true);
                 }
             }
         });
@@ -46,11 +68,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const clickedMobileMenu = e.target.closest(".mobile-menu");
 
         if (!clickedInsideMegaMenu) {
-            navItems.forEach((item) => item.classList.remove("open"));
+            closeAllMegaMenus();
         }
 
         if (!clickedMobileToggle && !clickedMobileMenu && mobileMenu) {
-            mobileMenu.classList.remove("show");
+            setMobileMenuState(false);
         }
     });
 
@@ -59,11 +81,11 @@ document.addEventListener("DOMContentLoaded", function () {
     ========================= */
     window.addEventListener("resize", function () {
         if (window.innerWidth > 980 && mobileMenu) {
-            mobileMenu.classList.remove("show");
+            setMobileMenuState(false);
         }
 
         if (window.innerWidth <= 980) {
-            navItems.forEach((item) => item.classList.remove("open"));
+            closeAllMegaMenus();
         }
     });
 
@@ -72,10 +94,99 @@ document.addEventListener("DOMContentLoaded", function () {
     ========================= */
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
-            navItems.forEach((item) => item.classList.remove("open"));
+            closeAllMegaMenus();
             if (mobileMenu) {
-                mobileMenu.classList.remove("show");
+                setMobileMenuState(false);
             }
         }
     });
+
+    /* =========================
+       CONTACT FORM
+    ========================= */
+    const contactForm = document.querySelector(".contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = contactForm.querySelector("[name='name']").value.trim();
+            const email = contactForm.querySelector("[name='email']").value.trim();
+            const message = contactForm.querySelector("[name='message']").value.trim();
+
+            if (!name || !email || !message) {
+                showFormMessage(contactForm, "Please fill in all required fields.", "error");
+                return;
+            }
+
+            showFormMessage(contactForm, "Thanks for reaching out — we'll be in touch soon.", "success");
+            contactForm.reset();
+        });
+    }
+
+    /* =========================
+       LOGIN FORM
+    ========================= */
+    const loginForm = document.querySelector(".login-form");
+    if (loginForm) {
+        loginForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const email    = loginForm.querySelector("[name='email']").value.trim();
+            const password = loginForm.querySelector("[name='password']").value.trim();
+
+            if (!email || !password) {
+                showFormMessage(loginForm, "Please enter your email and password.", "error");
+                return;
+            }
+
+            if (email === "demo@ventryx.com" && password === "demo") {
+                showFormMessage(loginForm, "Loading your demo workspace…", "success");
+                setTimeout(function () {
+                    window.location.href = "operra-demo.html";
+                }, 800);
+                return;
+            }
+
+            showFormMessage(loginForm, "Invalid credentials. Try the demo account above.", "error");
+        });
+    }
+
+    /* =========================
+       DEMO AUTOFILL BUTTON
+    ========================= */
+    const demoFillBtn = document.getElementById("demoFillBtn");
+    if (demoFillBtn) {
+        demoFillBtn.addEventListener("click", function () {
+            const emailInput    = document.getElementById("email");
+            const passwordInput = document.getElementById("password");
+            if (emailInput)    emailInput.value    = "demo@ventryx.com";
+            if (passwordInput) passwordInput.value = "demo";
+            emailInput && emailInput.focus();
+        });
+    }
+
+    /* =========================
+       FORM MESSAGE HELPER
+    ========================= */
+    function showFormMessage(form, text, type) {
+        const existing = form.querySelector(".form-message");
+        if (existing) existing.remove();
+
+        const msg = document.createElement("p");
+        msg.className = "form-message form-message--" + type;
+        msg.textContent = text;
+        msg.style.cssText =
+            "margin-top:12px;padding:10px 14px;border-radius:8px;font-size:0.88rem;font-weight:500;" +
+            (type === "success"
+                ? "background:rgba(34,197,94,0.1);color:#15803d;border:1px solid rgba(34,197,94,0.25);"
+                : "background:rgba(239,68,68,0.1);color:#dc2626;border:1px solid rgba(239,68,68,0.25);");
+
+        form.appendChild(msg);
+
+        if (type === "success") {
+            setTimeout(function () {
+                msg.remove();
+            }, 5000);
+        }
+    }
 });

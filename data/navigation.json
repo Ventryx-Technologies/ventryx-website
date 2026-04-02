@@ -2,23 +2,23 @@
     "main": [
         {
             "label": "Platform",
-            "url": "/platform"
+            "url": "platform.html"
         },
         {
             "label": "Products",
-            "url": "/products"
+            "url": "products.html"
         },
         {
             "label": "Solutions",
-            "url": "/solutions"
+            "url": "solutions.html"
         },
         {
             "label": "Resources",
-            "url": "/resources"
+            "url": "resources.html"
         },
         {
             "label": "Company",
-            "url": "/about"
+            "url": "company.html"
         }
     ]
 }

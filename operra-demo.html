@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operra — Demo Workspace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/pages/operra-demo.css" />
+</head>
+
+<body>
+
+    <!-- Demo Banner -->
+    <div class="demo-banner">
+        <span class="demo-banner-dot"></span>
+        <span>Demo Mode — You're viewing a sample Operra workspace</span>
+        <a href="login.html" class="demo-banner-exit">Exit Demo →</a>
+    </div>
+
+    <div class="app-shell">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <span class="sidebar-logo-mark">O</span>
+                    <span class="sidebar-logo-text">Operra</span>
+                </div>
+                <div class="sidebar-workspace">
+                    <span class="workspace-name">Ventryx Demo</span>
+                    <span class="workspace-badge">Demo</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-label">Overview</div>
+                <ul>
+                    <li>
+                        <a href="#" class="sidebar-link active" data-view="dashboard">
+                            <span class="sidebar-icon">⊞</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-link" data-view="analytics">
+                            <span class="sidebar-icon">▣</span>
+                            Analytics
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="sidebar-section-label">API Management</div>
+                <ul>
+                    <li>
+                        <a href="#" class="sidebar-link" data-view="apikeys">
+                            <span class="sidebar-icon">⚿</span>
+                            API Keys
+                            <span class="sidebar-count">84</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-link" data-view="logs">
+                            <span class="sidebar-icon">≡</span>
+                            Request Logs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-link" data-view="ratelimits">
+                            <span class="sidebar-icon">⊘</span>
+                            Rate Limits
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="sidebar-section-label">Platform</div>
+                <ul>
+                    <li>
+                        <a href="#" class="sidebar-link" data-view="billing">
+                            <span class="sidebar-icon">$</span>
+                            Billing
+                            <span class="sidebar-count sidebar-count--green">Pro</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-link" data-view="organizations">
+                            <span class="sidebar-icon">⊙</span>
+                            Organizations
+                            <span class="sidebar-count">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-link" data-view="settings">
+                            <span class="sidebar-icon">⚙</span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-user">
+                <div class="user-avatar">D</div>
+                <div class="user-info">
+                    <span class="user-name">Demo User</span>
+                    <span class="user-email">demo@ventryx.com</span>
+                </div>
+                <a href="login.html" class="user-signout" title="Sign out">↩</a>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <div class="app-main">
+
+            <!-- Top bar -->
+            <header class="app-topbar">
+                <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+
+                <div class="topbar-search">
+                    <span class="search-icon">⌕</span>
+                    <input type="text" placeholder="Search logs, keys, endpoints…" />
+                </div>
+
+                <div class="topbar-actions">
+                    <button class="topbar-btn" aria-label="Notifications">
+                        🔔
+                        <span class="notif-dot"></span>
+                    </button>
+                    <button class="topbar-btn" aria-label="Help">?</button>
+                    <div class="topbar-avatar">D</div>
+                </div>
+            </header>
+
+            <!-- Views -->
+            <div class="app-content">
+
+                <!-- ===== DASHBOARD VIEW ===== -->
+                <div class="view" id="view-dashboard">
+                    <div class="view-header">
+                        <div>
+                            <h1 class="view-title">Dashboard</h1>
+                            <p class="view-subtitle">Thursday, April 2, 2026</p>
+                        </div>
+                        <button class="btn-action">+ New API Key</button>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Requests Today</span>
+                                <span class="stat-icon stat-icon--blue">▣</span>
+                            </div>
+                            <div class="stat-value">42,318</div>
+                            <div class="stat-delta stat-delta--up">↑ 18% vs yesterday</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Active API Keys</span>
+                                <span class="stat-icon stat-icon--green">⚿</span>
+                            </div>
+                            <div class="stat-value">84</div>
+                            <div class="stat-delta stat-delta--up">+6 this month</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Error Rate</span>
+                                <span class="stat-icon stat-icon--amber">⚠</span>
+                            </div>
+                            <div class="stat-value">0.8%</div>
+                            <div class="stat-delta stat-delta--up">↓ 0.3% vs last week</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">MRR</span>
+                                <span class="stat-icon stat-icon--purple">$</span>
+                            </div>
+                            <div class="stat-value">$14,200</div>
+                            <div class="stat-delta stat-delta--up">+$1,400 this month</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+
+                        <!-- Recent Request Logs -->
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h2 class="panel-title">Recent Requests</h2>
+                                <a href="#" class="panel-link" data-view="logs">View all →</a>
+                            </div>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Method</th>
+                                        <th>Endpoint</th>
+                                        <th>Status</th>
+                                        <th>Latency</th>
+                                        <th>Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="method-badge method-post">POST</span></td>
+                                        <td class="td-name">/v1/completions</td>
+                                        <td><span class="badge badge--green">200</span></td>
+                                        <td class="td-meta">38ms</td>
+                                        <td class="td-meta">just now</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="method-badge method-get">GET</span></td>
+                                        <td class="td-name">/v1/models</td>
+                                        <td><span class="badge badge--green">200</span></td>
+                                        <td class="td-meta">12ms</td>
+                                        <td class="td-meta">4s ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="method-badge method-post">POST</span></td>
+                                        <td class="td-name">/v1/embeddings</td>
+                                        <td><span class="badge badge--amber">429</span></td>
+                                        <td class="td-meta">8ms</td>
+                                        <td class="td-meta">11s ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="method-badge method-get">GET</span></td>
+                                        <td class="td-name">/v1/usage</td>
+                                        <td><span class="badge badge--green">200</span></td>
+                                        <td class="td-meta">22ms</td>
+                                        <td class="td-meta">18s ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="method-badge method-delete">DELETE</span></td>
+                                        <td class="td-name">/v1/keys/op_k_8f2a</td>
+                                        <td><span class="badge badge--red">401</span></td>
+                                        <td class="td-meta">6ms</td>
+                                        <td class="td-meta">42s ago</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Right column -->
+                        <div class="dashboard-right">
+
+                            <!-- Activity chart -->
+                            <div class="panel">
+                                <div class="panel-header">
+                                    <h2 class="panel-title">Requests — Last 7 Days</h2>
+                                </div>
+                                <div class="bar-chart">
+                                    <div class="bar-chart-bars">
+                                        <div class="bar-col">
+                                            <div class="bar" style="height:52%"></div>
+                                            <span class="bar-label">Mon</span>
+                                        </div>
+                                        <div class="bar-col">
+                                            <div class="bar" style="height:68%"></div>
+                                            <span class="bar-label">Tue</span>
+                                        </div>
+                                        <div class="bar-col">
+                                            <div class="bar" style="height:45%"></div>
+                                            <span class="bar-label">Wed</span>
+                                        </div>
+                                        <div class="bar-col">
+                                            <div class="bar" style="height:81%"></div>
+                                            <span class="bar-label">Thu</span>
+                                        </div>
+                                        <div class="bar-col">
+                                            <div class="bar" style="height:74%"></div>
+                                            <span class="bar-label">Fri</span>
+                                        </div>
+                                        <div class="bar-col">
+                                            <div class="bar bar--dim" style="height:38%"></div>
+                                            <span class="bar-label">Sat</span>
+                                        </div>
+                                        <div class="bar-col">
+                                            <div class="bar bar--active" style="height:91%"></div>
+                                            <span class="bar-label">Today</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Activity feed -->
+                            <div class="panel">
+                                <div class="panel-header">
+                                    <h2 class="panel-title">Live Activity</h2>
+                                    <span class="live-dot"></span>
+                                </div>
+                                <ul class="activity-feed">
+                                    <li class="activity-item">
+                                        <span class="activity-dot activity-dot--green"></span>
+                                        <div class="activity-body">
+                                            <p>Key <strong>op_live_7f2a…</strong> — 1,240 requests in last hour</p>
+                                            <span>just now</span>
+                                        </div>
+                                    </li>
+                                    <li class="activity-item">
+                                        <span class="activity-dot activity-dot--amber"></span>
+                                        <div class="activity-body">
+                                            <p>Rate limit hit — org <strong>Acme Corp</strong> on /v1/completions</p>
+                                            <span>2 min ago</span>
+                                        </div>
+                                    </li>
+                                    <li class="activity-item">
+                                        <span class="activity-dot activity-dot--blue"></span>
+                                        <div class="activity-body">
+                                            <p>New API key created by <strong>sarah@example.com</strong></p>
+                                            <span>14 min ago</span>
+                                        </div>
+                                    </li>
+                                    <li class="activity-item">
+                                        <span class="activity-dot activity-dot--purple"></span>
+                                        <div class="activity-body">
+                                            <p>Stripe invoice paid — <strong>$299.00</strong> from DataFlow Inc</p>
+                                            <span>38 min ago</span>
+                                        </div>
+                                    </li>
+                                    <li class="activity-item">
+                                        <span class="activity-dot activity-dot--red"></span>
+                                        <div class="activity-body">
+                                            <p>Key <strong>op_live_3d9c…</strong> revoked — suspicious activity</p>
+                                            <span>1 hr ago</span>
+                                        </div>
+                                    </li>
+                                    <li class="activity-item">
+                                        <span class="activity-dot activity-dot--green"></span>
+                                        <div class="activity-body">
+                                            <p>Org <strong>BuildRight LLC</strong> upgraded to Growth plan</p>
+                                            <span>2 hrs ago</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== ANALYTICS VIEW ===== -->
+                <div class="view view--hidden" id="view-analytics">
+                    <div class="view-header">
+                        <div>
+                            <h1 class="view-title">Analytics</h1>
+                            <p class="view-subtitle">API usage and performance metrics</p>
+                        </div>
+                        <button class="btn-action btn-action--outline">Export Report</button>
+                    </div>
+
+                    <div class="analytics-grid">
+                        <div class="panel panel--span2">
+                            <div class="panel-header">
+                                <h2 class="panel-title">API Requests — Last 30 Days</h2>
+                            </div>
+                            <div class="bar-chart bar-chart--tall">
+                                <div class="bar-chart-bars">
+                                    <div class="bar-col"><div class="bar" style="height:41%"></div><span class="bar-label">Mar 3</span></div>
+                                    <div class="bar-col"><div class="bar" style="height:55%"></div><span class="bar-label">Mar 6</span></div>
+                                    <div class="bar-col"><div class="bar" style="height:48%"></div><span class="bar-label">Mar 9</span></div>
+                                    <div class="bar-col"><div class="bar" style="height:63%"></div><span class="bar-label">Mar 12</span></div>
+                                    <div class="bar-col"><div class="bar" style="height:72%"></div><span class="bar-label">Mar 15</span></div>
+                                    <div class="bar-col"><div class="bar" style="height:58%"></div><span class="bar-label">Mar 18</span></div>
+                                    <div class="bar-col"><div class="bar" style="height:67%"></div><span class="bar-label">Mar 21</span></div>
+                                    <div class="bar-col"><div class="bar" style="height:79%"></div><span class="bar-label">Mar 24</span></div>
+                                    <div class="bar-col"><div class="bar" style="height:85%"></div><span class="bar-label">Mar 27</span></div>
+                                    <div class="bar-col"><div class="bar" style="height:91%"></div><span class="bar-label">Mar 30</span></div>
+                                    <div class="bar-col"><div class="bar bar--active" style="height:96%"></div><span class="bar-label">Today</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h2 class="panel-title">Top Endpoints</h2>
+                            </div>
+                            <ul class="ranked-list">
+                                <li class="ranked-item">
+                                    <span class="rank-num">1</span>
+                                    <span class="rank-name">POST /v1/completions</span>
+                                    <span class="rank-val">28,411</span>
+                                </li>
+                                <li class="ranked-item">
+                                    <span class="rank-num">2</span>
+                                    <span class="rank-name">POST /v1/embeddings</span>
+                                    <span class="rank-val">9,832</span>
+                                </li>
+                                <li class="ranked-item">
+                                    <span class="rank-num">3</span>
+                                    <span class="rank-name">GET /v1/models</span>
+                                    <span class="rank-val">2,104</span>
+                                </li>
+                                <li class="ranked-item">
+                                    <span class="rank-num">4</span>
+                                    <span class="rank-name">GET /v1/usage</span>
+                                    <span class="rank-val">1,488</span>
+                                </li>
+                                <li class="ranked-item">
+                                    <span class="rank-num">5</span>
+                                    <span class="rank-name">POST /v1/chat</span>
+                                    <span class="rank-val">483</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h2 class="panel-title">Performance Metrics</h2>
+                            </div>
+                            <div class="metric-stack">
+                                <div class="metric-row">
+                                    <span class="metric-label">Avg response time</span>
+                                    <span class="metric-val">28ms</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span class="metric-label">p99 latency</span>
+                                    <span class="metric-val">38ms</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span class="metric-label">Total requests (30d)</span>
+                                    <span class="metric-val">1.24M</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span class="metric-label">Success rate</span>
+                                    <span class="metric-val metric-val--green">99.2%</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span class="metric-label">Rate-limited requests</span>
+                                    <span class="metric-val metric-val--amber">0.4%</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span class="metric-label">4xx errors</span>
+                                    <span class="metric-val metric-val--red">0.4%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== API KEYS VIEW ===== -->
+                <div class="view view--hidden" id="view-apikeys">
+                    <div class="view-header">
+                        <div>
+                            <h1 class="view-title">API Keys</h1>
+                            <p class="view-subtitle">84 active keys across 3 organizations</p>
+                        </div>
+                        <button class="btn-action">+ Create Key</button>
+                    </div>
+
+                    <div class="panel">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Key Prefix</th>
+                                    <th>Scopes</th>
+                                    <th>Requests (30d)</th>
+                                    <th>Last Used</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="td-name">Production Key</td>
+                                    <td class="td-meta td-mono">op_live_7f2a…</td>
+                                    <td class="td-meta">read, write</td>
+                                    <td class="td-meta">28,411</td>
+                                    <td class="td-meta">just now</td>
+                                    <td><span class="badge badge--green">Active</span></td>
+                                    <td class="td-actions">
+                                        <button class="action-btn action-btn--reject">Revoke</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-name">Read-Only Analytics</td>
+                                    <td class="td-meta td-mono">op_live_c4e1…</td>
+                                    <td class="td-meta">read</td>
+                                    <td class="td-meta">1,488</td>
+                                    <td class="td-meta">4 min ago</td>
+                                    <td><span class="badge badge--green">Active</span></td>
+                                    <td class="td-actions">
+                                        <button class="action-btn action-btn--reject">Revoke</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-name">DataFlow Inc — Prod</td>
+                                    <td class="td-meta td-mono">op_live_9b3d…</td>
+                                    <td class="td-meta">read, write, billing</td>
+                                    <td class="td-meta">9,832</td>
+                                    <td class="td-meta">1 hr ago</td>
+                                    <td><span class="badge badge--green">Active</span></td>
+                                    <td class="td-actions">
+                                        <button class="action-btn action-btn--reject">Revoke</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-name">Acme Corp — Staging</td>
+                                    <td class="td-meta td-mono">op_test_1a8f…</td>
+                                    <td class="td-meta">read, write</td>
+                                    <td class="td-meta">483</td>
+                                    <td class="td-meta">Yesterday</td>
+                                    <td><span class="badge badge--blue">Test</span></td>
+                                    <td class="td-actions">
+                                        <button class="action-btn action-btn--reject">Revoke</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-name">BuildRight — Legacy</td>
+                                    <td class="td-meta td-mono">op_live_3d9c…</td>
+                                    <td class="td-meta">read</td>
+                                    <td class="td-meta">0</td>
+                                    <td class="td-meta">2 weeks ago</td>
+                                    <td><span class="badge badge--red">Revoked</span></td>
+                                    <td class="td-actions">
+                                        <button class="action-btn action-btn--approve">Restore</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ===== REQUEST LOGS VIEW ===== -->
+                <div class="view view--hidden" id="view-logs">
+                    <div class="view-header">
+                        <div>
+                            <h1 class="view-title">Request Logs</h1>
+                            <p class="view-subtitle">Real-time log of all API requests</p>
+                        </div>
+                        <div class="view-header-actions">
+                            <button class="btn-action btn-action--outline">Filter</button>
+                            <button class="btn-action btn-action--outline">Export</button>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Endpoint</th>
+                                    <th>Status</th>
+                                    <th>Latency</th>
+                                    <th>IP Address</th>
+                                    <th>Key</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="method-badge method-post">POST</span></td>
+                                    <td class="td-name">/v1/completions</td>
+                                    <td><span class="badge badge--green">200</span></td>
+                                    <td class="td-meta">38ms</td>
+                                    <td class="td-meta">104.21.44.12</td>
+                                    <td class="td-meta td-mono">op_live_7f2a…</td>
+                                    <td class="td-meta">just now</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="method-badge method-get">GET</span></td>
+                                    <td class="td-name">/v1/models</td>
+                                    <td><span class="badge badge--green">200</span></td>
+                                    <td class="td-meta">12ms</td>
+                                    <td class="td-meta">104.21.44.12</td>
+                                    <td class="td-meta td-mono">op_live_7f2a…</td>
+                                    <td class="td-meta">4s ago</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="method-badge method-post">POST</span></td>
+                                    <td class="td-name">/v1/embeddings</td>
+                                    <td><span class="badge badge--amber">429</span></td>
+                                    <td class="td-meta">8ms</td>
+                                    <td class="td-meta">172.56.92.31</td>
+                                    <td class="td-meta td-mono">op_live_9b3d…</td>
+                                    <td class="td-meta">11s ago</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="method-badge method-get">GET</span></td>
+                                    <td class="td-name">/v1/usage</td>
+                                    <td><span class="badge badge--green">200</span></td>
+                                    <td class="td-meta">22ms</td>
+                                    <td class="td-meta">198.41.128.7</td>
+                                    <td class="td-meta td-mono">op_live_c4e1…</td>
+                                    <td class="td-meta">18s ago</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="method-badge method-delete">DELETE</span></td>
+                                    <td class="td-name">/v1/keys/op_k_8f2a</td>
+                                    <td><span class="badge badge--red">401</span></td>
+                                    <td class="td-meta">6ms</td>
+                                    <td class="td-meta">45.33.18.44</td>
+                                    <td class="td-meta td-mono">—</td>
+                                    <td class="td-meta">42s ago</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="method-badge method-post">POST</span></td>
+                                    <td class="td-name">/v1/chat</td>
+                                    <td><span class="badge badge--green">200</span></td>
+                                    <td class="td-meta">41ms</td>
+                                    <td class="td-meta">104.21.44.12</td>
+                                    <td class="td-meta td-mono">op_live_7f2a…</td>
+                                    <td class="td-meta">1 min ago</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="method-badge method-get">GET</span></td>
+                                    <td class="td-name">/v1/keys</td>
+                                    <td><span class="badge badge--green">200</span></td>
+                                    <td class="td-meta">19ms</td>
+                                    <td class="td-meta">198.41.128.7</td>
+                                    <td class="td-meta td-mono">op_live_c4e1…</td>
+                                    <td class="td-meta">2 min ago</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="method-badge method-post">POST</span></td>
+                                    <td class="td-name">/v1/completions</td>
+                                    <td><span class="badge badge--red">500</span></td>
+                                    <td class="td-meta">2,104ms</td>
+                                    <td class="td-meta">172.56.92.31</td>
+                                    <td class="td-meta td-mono">op_live_9b3d…</td>
+                                    <td class="td-meta">4 min ago</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ===== RATE LIMITS VIEW ===== -->
+                <div class="view view--hidden" id="view-ratelimits">
+                    <div class="view-header">
+                        <div>
+                            <h1 class="view-title">Rate Limits</h1>
+                            <p class="view-subtitle">Configured limits per plan and organization</p>
+                        </div>
+                        <button class="btn-action btn-action--outline">Edit Limits</button>
+                    </div>
+
+                    <div class="panel">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Plan / Org</th>
+                                    <th>Limit</th>
+                                    <th>Window</th>
+                                    <th>Used (now)</th>
+                                    <th>% Used</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="td-name">Starter Plan</td>
+                                    <td class="td-meta">100 req</td>
+                                    <td class="td-meta">per minute</td>
+                                    <td class="td-meta">42</td>
+                                    <td><div class="usage-bar"><div class="usage-fill" style="width:42%"></div></div></td>
+                                    <td><span class="badge badge--green">OK</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-name">Growth Plan</td>
+                                    <td class="td-meta">1,000 req</td>
+                                    <td class="td-meta">per minute</td>
+                                    <td class="td-meta">380</td>
+                                    <td><div class="usage-bar"><div class="usage-fill" style="width:38%"></div></div></td>
+                                    <td><span class="badge badge--green">OK</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-name">Acme Corp (custom)</td>
+                                    <td class="td-meta">500 req</td>
+                                    <td class="td-meta">per minute</td>
+                                    <td class="td-meta">487</td>
+                                    <td><div class="usage-bar usage-bar--warn"><div class="usage-fill usage-fill--warn" style="width:97%"></div></div></td>
+                                    <td><span class="badge badge--amber">Near Limit</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-name">Pro Plan</td>
+                                    <td class="td-meta">10,000 req</td>
+                                    <td class="td-meta">per minute</td>
+                                    <td class="td-meta">1,240</td>
+                                    <td><div class="usage-bar"><div class="usage-fill" style="width:12%"></div></div></td>
+                                    <td><span class="badge badge--green">OK</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-name">BuildRight LLC (custom)</td>
+                                    <td class="td-meta">2,000 req</td>
+                                    <td class="td-meta">per minute</td>
+                                    <td class="td-meta">0</td>
+                                    <td><div class="usage-bar"><div class="usage-fill" style="width:0%"></div></div></td>
+                                    <td><span class="badge badge--blue">Idle</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="stats-grid" style="margin-top:24px">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Rate-Limited Requests (24h)</span>
+                                <span class="stat-icon stat-icon--amber">⊘</span>
+                            </div>
+                            <div class="stat-value">183</div>
+                            <div class="stat-delta stat-delta--up">0.4% of total traffic</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Orgs Near Limit</span>
+                                <span class="stat-icon stat-icon--amber">⚠</span>
+                            </div>
+                            <div class="stat-value">1</div>
+                            <div class="stat-delta stat-delta--alert">Acme Corp at 97%</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Redis Cache Hit Rate</span>
+                                <span class="stat-icon stat-icon--green">⚡</span>
+                            </div>
+                            <div class="stat-value">98.4%</div>
+                            <div class="stat-delta stat-delta--up">Avg across all keys</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Enforcement Latency</span>
+                                <span class="stat-icon stat-icon--blue">▣</span>
+                            </div>
+                            <div class="stat-value">&lt; 2ms</div>
+                            <div class="stat-delta stat-delta--up">p99 middleware overhead</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== BILLING VIEW ===== -->
+                <div class="view view--hidden" id="view-billing">
+                    <div class="view-header">
+                        <div>
+                            <h1 class="view-title">Billing</h1>
+                            <p class="view-subtitle">Subscriptions, usage, and invoices via Stripe</p>
+                        </div>
+                        <button class="btn-action btn-action--outline">Manage in Stripe →</button>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">MRR</span>
+                                <span class="stat-icon stat-icon--green">$</span>
+                            </div>
+                            <div class="stat-value">$14,200</div>
+                            <div class="stat-delta stat-delta--up">+$1,400 this month</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Active Subscriptions</span>
+                                <span class="stat-icon stat-icon--blue">⊙</span>
+                            </div>
+                            <div class="stat-value">47</div>
+                            <div class="stat-delta stat-delta--up">+3 this month</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Invoices Paid (30d)</span>
+                                <span class="stat-icon stat-icon--purple">✓</span>
+                            </div>
+                            <div class="stat-value">44</div>
+                            <div class="stat-delta stat-delta--up">$11,800 collected</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-label">Failed Payments</span>
+                                <span class="stat-icon stat-icon--amber">⚠</span>
+                            </div>
+                            <div class="stat-value">1</div>
+                            <div class="stat-delta stat-delta--alert">Retry pending</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid" style="margin-top:24px">
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h2 class="panel-title">Recent Invoices</h2>
+                            </div>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Organization</th>
+                                        <th>Plan</th>
+                                        <th>Amount</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="td-name">DataFlow Inc</td>
+                                        <td class="td-meta">Growth</td>
+                                        <td class="td-meta">$299.00</td>
+                                        <td class="td-meta">Apr 1, 2026</td>
+                                        <td><span class="badge badge--green">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-name">Acme Corp</td>
+                                        <td class="td-meta">Pro</td>
+                                        <td class="td-meta">$599.00</td>
+                                        <td class="td-meta">Apr 1, 2026</td>
+                                        <td><span class="badge badge--green">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-name">BuildRight LLC</td>
+                                        <td class="td-meta">Growth</td>
+                                        <td class="td-meta">$299.00</td>
+                                        <td class="td-meta">Apr 1, 2026</td>
+                                        <td><span class="badge badge--red">Failed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-name">NovaSoft</td>
+                                        <td class="td-meta">Starter</td>
+                                        <td class="td-meta">$49.00</td>
+                                        <td class="td-meta">Mar 1, 2026</td>
+                                        <td><span class="badge badge--green">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-name">Horizon Labs</td>
+                                        <td class="td-meta">Pro</td>
+                                        <td class="td-meta">$599.00</td>
+                                        <td class="td-meta">Mar 1, 2026</td>
+                                        <td><span class="badge badge--green">Paid</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="dashboard-right">
+                            <div class="panel">
+                                <div class="panel-header">
+                                    <h2 class="panel-title">Plan Breakdown</h2>
+                                </div>
+                                <ul class="ranked-list">
+                                    <li class="ranked-item">
+                                        <span class="rank-num">Pro</span>
+                                        <span class="rank-name">$599/mo</span>
+                                        <span class="rank-val">12 orgs</span>
+                                    </li>
+                                    <li class="ranked-item">
+                                        <span class="rank-num">Growth</span>
+                                        <span class="rank-name">$299/mo</span>
+                                        <span class="rank-val">24 orgs</span>
+                                    </li>
+                                    <li class="ranked-item">
+                                        <span class="rank-num">Starter</span>
+                                        <span class="rank-name">$49/mo</span>
+                                        <span class="rank-val">11 orgs</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="panel">
+                                <div class="panel-header">
+                                    <h2 class="panel-title">Stripe Webhooks</h2>
+                                    <span class="live-dot"></span>
+                                </div>
+                                <ul class="activity-feed">
+                                    <li class="activity-item">
+                                        <span class="activity-dot activity-dot--green"></span>
+                                        <div class="activity-body">
+                                            <p><strong>invoice.paid</strong> — DataFlow Inc</p>
+                                            <span>38 min ago</span>
+                                        </div>
+                                    </li>
+                                    <li class="activity-item">
+                                        <span class="activity-dot activity-dot--red"></span>
+                                        <div class="activity-body">
+                                            <p><strong>invoice.payment_failed</strong> — BuildRight LLC</p>
+                                            <span>1 hr ago</span>
+                                        </div>
+                                    </li>
+                                    <li class="activity-item">
+                                        <span class="activity-dot activity-dot--blue"></span>
+                                        <div class="activity-body">
+                                            <p><strong>customer.subscription.updated</strong> — Acme Corp → Pro</p>
+                                            <span>2 hrs ago</span>
+                                        </div>
+                                    </li>
+                                    <li class="activity-item">
+                                        <span class="activity-dot activity-dot--green"></span>
+                                        <div class="activity-body">
+                                            <p><strong>invoice.paid</strong> — Acme Corp</p>
+                                            <span>2 hrs ago</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== ORGANIZATIONS VIEW ===== -->
+                <div class="view view--hidden" id="view-organizations">
+                    <div class="view-header">
+                        <div>
+                            <h1 class="view-title">Organizations</h1>
+                            <p class="view-subtitle">3 organizations in this workspace</p>
+                        </div>
+                        <button class="btn-action">+ Add Organization</button>
+                    </div>
+
+                    <div class="panel">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Organization</th>
+                                    <th>Plan</th>
+                                    <th>Members</th>
+                                    <th>API Keys</th>
+                                    <th>Requests (30d)</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="td-name">DataFlow Inc</td>
+                                    <td class="td-meta">Growth</td>
+                                    <td class="td-meta">8</td>
+                                    <td class="td-meta">14</td>
+                                    <td class="td-meta">342,100</td>
+                                    <td><span class="badge badge--green">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-name">Acme Corp</td>
+                                    <td class="td-meta">Pro</td>
+                                    <td class="td-meta">22</td>
+                                    <td class="td-meta">38</td>
+                                    <td class="td-meta">891,400</td>
+                                    <td><span class="badge badge--green">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-name">BuildRight LLC</td>
+                                    <td class="td-meta">Growth</td>
+                                    <td class="td-meta">5</td>
+                                    <td class="td-meta">32</td>
+                                    <td class="td-meta">6,800</td>
+                                    <td><span class="badge badge--amber">Payment Due</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ===== SETTINGS (placeholder) ===== -->
+                <div class="view view--hidden" id="view-settings">
+                    <div class="view-header">
+                        <h1 class="view-title">Settings</h1>
+                    </div>
+                    <div class="placeholder-panel">
+                        <div class="placeholder-icon">⚙</div>
+                        <h2>Workspace Settings</h2>
+                        <p>Workspace configuration, RBAC roles, webhook endpoints, JWT settings, and security preferences will appear here.</p>
+                        <span class="placeholder-tag">Coming in full release</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/operra-demo.js" defer></script>
+</body>
+
+</html>

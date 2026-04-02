@@ -1,0 +1,81 @@
+{
+    "products": [
+        {
+            "id": "operra",
+            "name": "Operra",
+            "tagline": "Modern operations platform for workflows, approvals, and automation",
+            "description": "Operra is Ventryx's flagship business operations platform built to help organizations manage workflows, approvals, internal tools, analytics, and automation from one central system.",
+            "url": "operra.html",
+            "status": "available",
+            "features": [
+                {
+                    "label": "Workflows",
+                    "description": "Design and automate multi-step business workflows with routing, conditions, and triggers."
+                },
+                {
+                    "label": "Approvals",
+                    "description": "Structured approval routing with escalation rules, deadlines, and audit trails."
+                },
+                {
+                    "label": "Analytics",
+                    "description": "Operational reporting, usage metrics, activity logs, and business insights."
+                },
+                {
+                    "label": "Automation",
+                    "description": "Rules-based automation engine for notifications, task triggers, and system events."
+                },
+                {
+                    "label": "Admin Console",
+                    "description": "Centralized admin panel for managing users, permissions, settings, and platform configuration."
+                },
+                {
+                    "label": "Internal Dashboards",
+                    "description": "Customizable dashboards for operational visibility across teams and processes."
+                }
+            ],
+            "highlights": [
+                "Centralized workflows and approvals",
+                "Automation and operational visibility",
+                "Scalable architecture for growing teams"
+            ]
+        }
+    ],
+    "platform_capabilities": [
+        {
+            "id": "api-infrastructure",
+            "label": "API Infrastructure",
+            "icon": "API",
+            "description": "Design, manage, and scale application interfaces for modern products and internal systems."
+        },
+        {
+            "id": "authentication",
+            "label": "Authentication",
+            "icon": "AUTH",
+            "description": "Secure access control, identity management, and protected workflows across your platform."
+        },
+        {
+            "id": "automation",
+            "label": "Automation",
+            "icon": "AUTO",
+            "description": "Streamline repetitive operations with triggers, rules, notifications, and workflow orchestration."
+        },
+        {
+            "id": "data-pipelines",
+            "label": "Data Pipelines",
+            "icon": "DATA",
+            "description": "Move, structure, and monitor operational data across services, tools, and business processes."
+        },
+        {
+            "id": "security",
+            "label": "Security",
+            "icon": "SEC",
+            "description": "Build with strong controls, auditability, reliability, and modern security-first practices."
+        },
+        {
+            "id": "observability",
+            "label": "Observability",
+            "icon": "OBS",
+            "description": "Track events, monitor systems, and understand platform health with operational visibility."
+        }
+    ]
+}

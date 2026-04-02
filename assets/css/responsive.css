@@ -1,0 +1,135 @@
+/* =========================================================
+   RESPONSIVE
+   Global breakpoint rules that apply across all pages.
+   Page-specific responsive rules live in each page's CSS.
+   ========================================================= */
+
+/* -------------------------
+   Breakpoint reference
+   xl:  1200px
+   lg:  1024px
+   md:   768px
+   sm:   640px
+   xs:   480px
+   ========================================================= */
+
+/* -------------------------
+   Container
+   ------------------------- */
+
+@media (max-width: 1280px) {
+    .container {
+        width: min(1100px, calc(100% - 40px));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: calc(100% - 32px);
+    }
+}
+
+/* -------------------------
+   Typography scale
+   ------------------------- */
+
+@media (max-width: 768px) {
+    h1 { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+    h2 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+    h3 { font-size: clamp(1.1rem, 4vw, 1.4rem); }
+}
+
+/* -------------------------
+   Navigation (secondary header)
+   Used by developers.html, docs.html, support.html
+   ------------------------- */
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    min-height: 86px;
+}
+
+.site-nav .nav-list {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-nav .nav-item a {
+    display: inline-block;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0f172a;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.site-nav .nav-item a:hover,
+.site-nav .nav-item a.active {
+    background: rgba(37, 99, 235, 0.08);
+    color: #2563eb;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .site-nav {
+        display: none;
+    }
+
+    .header-actions .btn-outline {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-inner {
+        min-height: 72px;
+        gap: 16px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+}
+
+/* -------------------------
+   Section headings
+   ------------------------- */
+
+@media (max-width: 768px) {
+    .section-heading {
+        margin-bottom: 36px;
+    }
+
+    .center-heading {
+        margin-bottom: 36px;
+    }
+}
+
+/* -------------------------
+   Utility: hide on mobile
+   ------------------------- */
+
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .show-mobile {
+        display: none !important;
+    }
+}

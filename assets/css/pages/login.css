@@ -155,6 +155,70 @@ body {
 }
 
 /* =========================================================
+   DEMO HINT
+   ========================================================= */
+
+.demo-hint {
+    margin-bottom: 24px;
+    padding: 16px 18px;
+    background: rgba(56, 189, 248, 0.06);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 14px;
+}
+
+.demo-hint-label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #38bdf8;
+    margin-bottom: 6px;
+}
+
+.demo-hint p {
+    font-size: 0.88rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0 0 12px;
+}
+
+.demo-credentials {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+.demo-credentials span {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    font-family: "SF Mono", "Fira Code", monospace;
+}
+
+.demo-credentials strong {
+    color: #7dd3fc;
+}
+
+.demo-autofill-btn {
+    width: 100%;
+    justify-content: center;
+    height: 38px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.demo-autofill-btn:hover {
+    background: rgba(56, 189, 248, 0.14);
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* =========================================================
    RESPONSIVE
    ========================================================= */
 

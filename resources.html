@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ventryx Technologies | Software for Modern Businesses</title>
+    <title>Resources | Ventryx Technologies</title>
     <meta name="description"
-        content="Ventryx Technologies builds scalable SaaS platforms, APIs, and digital infrastructure for modern businesses." />
+        content="Documentation, guides, API references, tutorials, and support resources for Ventryx developers and teams." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +14,7 @@
         rel="stylesheet" />
 
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/pages/home.css" />
+    <link rel="stylesheet" href="assets/css/pages/resources.css" />
 </head>
 
 <body>
@@ -315,7 +315,7 @@
         <div class="mobile-menu" aria-label="Mobile navigation">
             <div class="mobile-menu-inner">
                 <a href="platform.html">Platform</a>
-                <a href="products.html">Products</a>
+                <a href="operra.html">Products</a>
                 <a href="solutions.html">Solutions</a>
                 <a href="resources.html">Resources</a>
                 <a href="about.html">Company</a>
@@ -326,419 +326,226 @@
         </div>
     </header>
 
-    <main>
+    <main class="resources-page">
+
         <!-- Hero -->
-        <section class="hero">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <span class="eyebrow">Software for Modern Businesses</span>
-                    <h1>Build the Infrastructure Powering Modern Software</h1>
-                    <p>
-                        Ventryx Technologies creates scalable platforms, APIs, and digital systems
-                        for modern businesses, startups, and software teams.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="contact.html" class="btn btn-primary">Get Started</a>
-                        <a href="technology.html" class="btn btn-outline">Explore Technology</a>
-                    </div>
-                </div>
-
-                <div class="hero-visual">
-                    <div class="platform-preview">
-                        <div class="preview-topbar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <div class="preview-header">
-                            <div>
-                                <p class="preview-label">VENTRYX PLATFORM</p>
-                                <h3>Infrastructure Command Center</h3>
-                            </div>
-                            <div class="preview-status">Live</div>
-                        </div>
-
-                        <div class="preview-grid">
-                            <div class="preview-card">
-                                <p>API Gateway</p>
-                                <strong>128 Active Routes</strong>
-                            </div>
-                            <div class="preview-card">
-                                <p>Authentication</p>
-                                <strong>99.99% Uptime</strong>
-                            </div>
-                            <div class="preview-card">
-                                <p>Automation</p>
-                                <strong>42 Running Flows</strong>
-                            </div>
-                            <div class="preview-card">
-                                <p>Analytics</p>
-                                <strong>18.4K Events</strong>
-                            </div>
-                        </div>
-
-                        <div class="preview-footer">
-                            <div class="preview-line"></div>
-                            <div class="preview-line short"></div>
-                        </div>
-                    </div>
-                </div>
+        <section class="resources-hero section">
+            <div class="container resources-hero-inner">
+                <span class="section-kicker">Resources</span>
+                <h1>Everything you need to build with Ventryx</h1>
+                <p>
+                    Documentation, API references, guides, tutorials, and support material
+                    built for developers and teams shipping real products on the Ventryx platform.
+                </p>
             </div>
         </section>
 
-        <!-- Trust Strip -->
-        <section class="trust-strip">
+        <!-- Quick Links -->
+        <section class="resources-quicklinks section">
             <div class="container">
-                <p class="section-kicker center">Built for modern software teams</p>
-                <div class="trust-logos">
-                    <span>Platforms</span>
-                    <span>APIs</span>
-                    <span>Automation</span>
-                    <span>Security</span>
-                    <span>Infrastructure</span>
+                <div class="quicklinks-grid">
+                    <a href="docs.html" class="quicklink-card">
+                        <div class="quicklink-icon">DOCS</div>
+                        <h3>Documentation</h3>
+                        <p>Full platform documentation, integration guides, and reference material.</p>
+                        <span class="quicklink-arrow">→</span>
+                    </a>
+
+                    <a href="docs.html" class="quicklink-card">
+                        <div class="quicklink-icon">API</div>
+                        <h3>API Reference</h3>
+                        <p>Complete API endpoint reference with request/response examples.</p>
+                        <span class="quicklink-arrow">→</span>
+                    </a>
+
+                    <a href="developers.html" class="quicklink-card">
+                        <div class="quicklink-icon">SDK</div>
+                        <h3>SDKs &amp; Libraries</h3>
+                        <p>Official SDKs for Node.js, Python, and other popular languages.</p>
+                        <span class="quicklink-arrow">→</span>
+                    </a>
+
+                    <a href="support.html" class="quicklink-card">
+                        <div class="quicklink-icon">HELP</div>
+                        <h3>Help Center</h3>
+                        <p>Answers to common questions and troubleshooting guides.</p>
+                        <span class="quicklink-arrow">→</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Capabilities -->
-        <section class="capabilities section">
+        <!-- Developer Resources -->
+        <section class="resources-developer section">
             <div class="container">
                 <div class="section-heading">
-                    <span class="section-kicker">Core Platform Capabilities</span>
-                    <h2>Everything needed to build, operate, and scale modern systems</h2>
+                    <span class="section-kicker">For Developers</span>
+                    <h2>Technical resources built for engineering teams</h2>
                     <p>
-                        Ventryx brings infrastructure, developer tools, automation, and business systems
-                        together in one modern platform experience.
+                        Everything a developer needs to integrate Ventryx — from initial authentication
+                        to advanced workflow automation and event subscriptions.
                     </p>
                 </div>
 
-                <div class="capabilities-grid">
-                    <article class="capability-card">
-                        <div class="capability-icon">API</div>
-                        <h3>API Infrastructure</h3>
-                        <p>
-                            Design, manage, and scale application interfaces for modern products and
-                            internal systems.
-                        </p>
-                    </article>
-
-                    <article class="capability-card">
-                        <div class="capability-icon">AUTH</div>
-                        <h3>Authentication</h3>
-                        <p>
-                            Secure access control, identity management, and protected workflows across
-                            your platform.
-                        </p>
-                    </article>
-
-                    <article class="capability-card">
-                        <div class="capability-icon">AUTO</div>
-                        <h3>Automation</h3>
-                        <p>
-                            Streamline repetitive operations with triggers, rules, notifications, and
-                            workflow orchestration.
-                        </p>
-                    </article>
-
-                    <article class="capability-card">
-                        <div class="capability-icon">DATA</div>
-                        <h3>Data Pipelines</h3>
-                        <p>
-                            Move, structure, and monitor operational data across services, tools, and
-                            business processes.
-                        </p>
-                    </article>
-
-                    <article class="capability-card">
-                        <div class="capability-icon">SEC</div>
-                        <h3>Security</h3>
-                        <p>
-                            Build with strong controls, auditability, reliability, and modern
-                            security-first practices.
-                        </p>
-                    </article>
-
-                    <article class="capability-card">
-                        <div class="capability-icon">OBS</div>
-                        <h3>Observability</h3>
-                        <p>
-                            Track events, monitor systems, and understand platform health with
-                            operational visibility.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Product Section -->
-        <section class="product-highlight section">
-            <div class="container product-grid">
-                <div class="product-copy">
-                    <span class="section-kicker">Featured Product</span>
-                    <h2>Meet Operra</h2>
-                    <p>
-                        Operra is Ventryx’s modern operations platform built to help businesses manage
-                        workflows, approvals, internal tools, analytics, and automation from one central
-                        system.
-                    </p>
-
-                    <ul class="product-points">
-                        <li>✔ Centralized workflows and approvals</li>
-                        <li>✔ Automation and operational visibility</li>
-                        <li>✔ Scalable architecture for growing teams</li>
-                    </ul>
-
-                    <a href="operra.html" class="btn btn-primary">Explore Operra</a>
-                </div>
-
-                <div class="product-visual">
-                    <div class="operra-preview">
-                        <div class="operra-topbar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                <div class="dev-resources-grid">
+                    <article class="dev-resource-card">
+                        <div class="dev-resource-header">
+                            <div class="dev-resource-icon">GS</div>
+                            <h3>Getting Started</h3>
                         </div>
+                        <p>
+                            Set up your Ventryx account, create your first API key, and make
+                            your first API call in under 10 minutes.
+                        </p>
+                        <a href="docs.html" class="resource-link">Read guide →</a>
+                    </article>
 
-                        <div class="operra-shell">
-                            <aside class="operra-sidebar">
-                                <div class="operra-logo">O</div>
-                                <div class="operra-nav-item active">Dashboard</div>
-                                <div class="operra-nav-item">Workflows</div>
-                                <div class="operra-nav-item">Approvals</div>
-                                <div class="operra-nav-item">Analytics</div>
-                                <div class="operra-nav-item">Settings</div>
-                            </aside>
-
-                            <div class="operra-main">
-                                <div class="operra-header">
-                                    <div>
-                                        <p class="operra-label">OPERATIONS PLATFORM</p>
-                                        <h3>Operra Workspace</h3>
-                                    </div>
-                                    <div class="operra-badge">Live</div>
-                                </div>
-
-                                <div class="operra-stats">
-                                    <div class="operra-stat-card">
-                                        <span>Active Workflows</span>
-                                        <strong>42</strong>
-                                    </div>
-                                    <div class="operra-stat-card">
-                                        <span>Pending Approvals</span>
-                                        <strong>18</strong>
-                                    </div>
-                                    <div class="operra-stat-card">
-                                        <span>Automations Running</span>
-                                        <strong>126</strong>
-                                    </div>
-                                </div>
-
-                                <div class="operra-chart-card">
-                                    <div class="operra-card-header">
-                                        <h4>Operational Activity</h4>
-                                        <span>Last 30 Days</span>
-                                    </div>
-
-                                    <div class="operra-bars">
-                                        <span style="height: 45%;"></span>
-                                        <span style="height: 62%;"></span>
-                                        <span style="height: 58%;"></span>
-                                        <span style="height: 76%;"></span>
-                                        <span style="height: 68%;"></span>
-                                        <span style="height: 88%;"></span>
-                                        <span style="height: 72%;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="operra-table-card">
-                                    <div class="operra-card-header">
-                                        <h4>Recent Workflow Events</h4>
-                                        <span>Updated now</span>
-                                    </div>
-
-                                    <div class="operra-row">
-                                        <span>Invoice Approval Flow</span>
-                                        <strong>Completed</strong>
-                                    </div>
-                                    <div class="operra-row">
-                                        <span>Client Intake Automation</span>
-                                        <strong>Running</strong>
-                                    </div>
-                                    <div class="operra-row">
-                                        <span>Internal Ops Sync</span>
-                                        <strong>Scheduled</strong>
-                                    </div>
-                                </div>
-                            </div>
+                    <article class="dev-resource-card">
+                        <div class="dev-resource-header">
+                            <div class="dev-resource-icon">AUTH</div>
+                            <h3>Authentication</h3>
                         </div>
-                    </div>
+                        <p>
+                            Learn how to implement authentication, manage API keys, and
+                            set up role-based access control for your applications.
+                        </p>
+                        <a href="docs.html" class="resource-link">Read guide →</a>
+                    </article>
+
+                    <article class="dev-resource-card">
+                        <div class="dev-resource-header">
+                            <div class="dev-resource-icon">WF</div>
+                            <h3>Workflows API</h3>
+                        </div>
+                        <p>
+                            Build and manage automated workflows programmatically using
+                            the Ventryx Workflows API and event-driven triggers.
+                        </p>
+                        <a href="docs.html" class="resource-link">Read guide →</a>
+                    </article>
+
+                    <article class="dev-resource-card">
+                        <div class="dev-resource-header">
+                            <div class="dev-resource-icon">WH</div>
+                            <h3>Webhooks</h3>
+                        </div>
+                        <p>
+                            Subscribe to platform events and receive real-time HTTP
+                            notifications when things happen in your Ventryx workspace.
+                        </p>
+                        <a href="docs.html" class="resource-link">Read guide →</a>
+                    </article>
+
+                    <article class="dev-resource-card">
+                        <div class="dev-resource-header">
+                            <div class="dev-resource-icon">CLI</div>
+                            <h3>CLI Reference</h3>
+                        </div>
+                        <p>
+                            Use the Ventryx CLI to manage your platform configuration,
+                            deploy workflows, and automate operations from the terminal.
+                        </p>
+                        <a href="docs.html" class="resource-link">Read guide →</a>
+                    </article>
+
+                    <article class="dev-resource-card">
+                        <div class="dev-resource-header">
+                            <div class="dev-resource-icon">EX</div>
+                            <h3>Code Examples</h3>
+                        </div>
+                        <p>
+                            Browse real code samples for common integration patterns,
+                            workflow setups, and platform use cases across multiple languages.
+                        </p>
+                        <a href="docs.html" class="resource-link">Browse examples →</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Architecture -->
-        <section class="architecture section">
+        <!-- Learn -->
+        <section class="resources-learn section">
             <div class="container">
-                <div class="section-heading center-heading">
-                    <span class="section-kicker">How It Works</span>
-                    <h2>Ventryx connects applications, data, automation, and infrastructure</h2>
-                    <p>
-                        A unified platform approach helps teams move faster while keeping systems secure,
-                        scalable, and easier to manage.
-                    </p>
+                <div class="section-heading">
+                    <span class="section-kicker">Learn</span>
+                    <h2>Guides, tutorials, and deep dives</h2>
                 </div>
 
-                <div class="architecture-diagram">
-                    <div class="arch-layer">Applications &amp; Internal Tools</div>
-                    <div class="arch-arrow">↓</div>
-                    <div class="arch-core">Ventryx Core Platform</div>
+                <div class="learn-grid">
+                    <article class="learn-card">
+                        <span class="learn-tag">Guide</span>
+                        <h3>Building your first internal platform with Ventryx</h3>
+                        <p>
+                            A step-by-step walkthrough of designing, building, and deploying
+                            an internal operations platform using Ventryx infrastructure.
+                        </p>
+                        <a href="docs.html" class="resource-link">Read guide →</a>
+                    </article>
 
-                    <div class="arch-grid">
-                        <div class="arch-box">APIs</div>
-                        <div class="arch-box">Auth</div>
-                        <div class="arch-box">Automation</div>
-                        <div class="arch-box">Analytics</div>
-                    </div>
+                    <article class="learn-card">
+                        <span class="learn-tag">Tutorial</span>
+                        <h3>Automating approval workflows with the Ventryx API</h3>
+                        <p>
+                            Learn how to build a complete approval routing system with
+                            notifications, escalation rules, and audit logging in 30 minutes.
+                        </p>
+                        <a href="docs.html" class="resource-link">Start tutorial →</a>
+                    </article>
 
-                    <div class="arch-arrow">↓</div>
-                    <div class="arch-layer">Cloud Infrastructure &amp; Data Systems</div>
+                    <article class="learn-card">
+                        <span class="learn-tag">Deep Dive</span>
+                        <h3>Authentication patterns for modern SaaS applications</h3>
+                        <p>
+                            Explore SSO, RBAC, API key management, and session security
+                            patterns using the Ventryx authentication infrastructure.
+                        </p>
+                        <a href="docs.html" class="resource-link">Read article →</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- CTA -->
-        <section class="cta-section section">
+        <!-- Support Strip -->
+        <section class="resources-support section">
             <div class="container">
-                <div class="cta-panel">
-                    <div>
-                        <span class="section-kicker">Start Building</span>
-                        <h2>Build with Ventryx today</h2>
-                        <p>
-                            Launch modern systems, streamline operations, and create infrastructure
-                            built for growth.
-                        </p>
+                <div class="support-strip">
+                    <div class="support-strip-copy">
+                        <h3>Need help with something specific?</h3>
+                        <p>The Ventryx support team is here to help with technical questions, integration issues, and platform guidance.</p>
                     </div>
-
-                    <div class="cta-actions">
-                        <a href="contact.html" class="btn btn-primary">Contact Sales</a>
-                        <a href="technology.html" class="btn btn-outline">View Technology</a>
+                    <div class="support-strip-actions">
+                        <a href="support.html" class="btn btn-outline">Visit Help Center</a>
+                        <a href="contact.html" class="btn btn-primary">Contact Support</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Developer Section -->
-        <section class="developer-section">
-            <div class="container">
-                <span class="section-kicker">DEVELOPER EXPERIENCE</span>
-
-                <h2 class="section-title">Built for developers</h2>
-
-                <p class="section-description">
-                    Ventryx provides modern APIs, SDKs, automation tools, and developer
-                    infrastructure so teams can build faster and scale reliably.
-                </p>
-
-                <div class="developer-grid">
-                    <div class="developer-card">
-                        <div class="dev-icon">API</div>
-                        <h3>Powerful APIs</h3>
-                        <p>
-                            Integrate Ventryx services directly into your applications
-                            with fast, scalable REST APIs.
-                        </p>
-                    </div>
-
-                    <div class="developer-card">
-                        <div class="dev-icon">SDK</div>
-                        <h3>SDK Libraries</h3>
-                        <p>
-                            Use official SDKs to integrate Ventryx into your backend,
-                            services, and internal systems.
-                        </p>
-                    </div>
-
-                    <div class="developer-card">
-                        <div class="dev-icon">CLI</div>
-                        <h3>CLI Tools</h3>
-                        <p>
-                            Manage infrastructure, workflows, and platform services
-                            directly from the command line.
-                        </p>
-                    </div>
-
-                    <div class="developer-card">
-                        <div class="dev-icon">DOCS</div>
-                        <h3>Developer Docs</h3>
-                        <p>
-                            Comprehensive documentation, guides, and examples to help
-                            teams build quickly with Ventryx.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="developer-code">
-                    <pre><code>import { Ventryx } from "@ventryx/sdk"
-
-const client = new Ventryx({
-  apiKey: process.env.VENTRYX_API_KEY
-})
-
-await client.workflows.create({
-  name: "Invoice Approval Flow",
-  trigger: "invoice.created"
-})</code></pre>
-                </div>
-            </div>
-        </section>
-
-        <!-- Audience Strip -->
-        <section class="trust-strip">
-            <div class="container">
-                <p class="trust-label">Trusted by modern software teams</p>
-
-                <div class="trust-logos">
-                    <span>SaaS Teams</span>
-                    <span>Agencies</span>
-                    <span>Startups</span>
-                    <span>Developer Platforms</span>
-                    <span>Internal Tools</span>
-                    <span>Operations Teams</span>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-grid">
-            <!-- Company -->
             <div class="footer-col">
                 <div class="footer-brand">
                     <span class="brand-mark">V</span>
                     <span class="brand-text">Ventryx</span>
                 </div>
-
                 <p class="footer-description">
                     Ventryx Technologies builds modern infrastructure, APIs,
                     automation platforms, and digital systems for modern businesses.
                 </p>
             </div>
 
-            <!-- Platform -->
             <div class="footer-col">
                 <h4>Platform</h4>
                 <ul>
                     <li><a href="platform.html">Platform Overview</a></li>
-                    <li><a href="docs.html">APIs</a></li>
-                    <li><a href="docs.html">Authentication</a></li>
-                    <li><a href="platform.html">Automation</a></li>
                     <li><a href="technology.html">Infrastructure</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Get Started</a></li>
                 </ul>
             </div>
 
-            <!-- Products -->
             <div class="footer-col">
                 <h4>Products</h4>
                 <ul>
@@ -749,7 +556,6 @@ await client.workflows.create({
                 </ul>
             </div>
 
-            <!-- Resources -->
             <div class="footer-col">
                 <h4>Resources</h4>
                 <ul>
@@ -760,13 +566,11 @@ await client.workflows.create({
                 </ul>
             </div>
 
-            <!-- Company -->
             <div class="footer-col">
                 <h4>Company</h4>
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="technology.html">Technology</a></li>
-                    <li><a href="company.html">Careers</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>

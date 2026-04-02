@@ -1,0 +1,43 @@
+{
+    "columns": [
+        {
+            "heading": "Platform",
+            "links": [
+                { "label": "Platform Overview", "url": "platform.html" },
+                { "label": "Infrastructure",    "url": "technology.html" },
+                { "label": "APIs",              "url": "docs.html" },
+                { "label": "Authentication",    "url": "docs.html" },
+                { "label": "Automation",        "url": "platform.html" }
+            ]
+        },
+        {
+            "heading": "Products",
+            "links": [
+                { "label": "Operra Platform", "url": "operra.html" },
+                { "label": "Workflows",       "url": "operra.html" },
+                { "label": "Approvals",       "url": "operra.html" },
+                { "label": "Analytics",       "url": "operra.html" },
+                { "label": "Pricing",         "url": "pricing.html" }
+            ]
+        },
+        {
+            "heading": "Resources",
+            "links": [
+                { "label": "Documentation",    "url": "docs.html" },
+                { "label": "API Reference",    "url": "docs.html" },
+                { "label": "Developer Guides", "url": "docs.html" },
+                { "label": "Solutions",        "url": "solutions.html" },
+                { "label": "Support",          "url": "support.html" }
+            ]
+        },
+        {
+            "heading": "Company",
+            "links": [
+                { "label": "About",      "url": "about.html" },
+                { "label": "Technology", "url": "technology.html" },
+                { "label": "Developers", "url": "developers.html" },
+                { "label": "Contact",    "url": "contact.html" }
+            ]
+        }
+    ]
+}
