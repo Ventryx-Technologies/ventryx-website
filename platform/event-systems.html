@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Systems | Ventryx Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/pages/docs-inner.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="topbar"><div class="container topbar-inner"><nav class="topbar-nav">
+            <a href="../developers.html">Developers</a><a href="../docs.html">Docs</a>
+            <a href="../support.html">Support</a><a href="../login.html">Login</a>
+        </nav></div></div>
+        <div class="container header-inner">
+            <a href="../index.html" class="brand"><span class="brand-mark">V</span><span class="brand-text">Ventryx</span></a>
+            <nav class="site-nav"><ul class="nav-list">
+                <li><a href="../platform.html" class="active">Platform</a></li><li><a href="../products.html">Products</a></li>
+                <li><a href="../solutions.html">Solutions</a></li><li><a href="../resources.html">Resources</a></li>
+                <li><a href="../company.html">Company</a></li><li><a href="../pricing.html">Pricing</a></li>
+            </ul></nav>
+            <div class="header-actions">
+                <a href="../contact.html" class="btn btn-outline">Contact Sales</a>
+                <a href="../contact.html" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="docs-inner-page">
+        <div class="container">
+            <div class="docs-layout">
+                <aside class="docs-sidebar">
+                    <span class="docs-sidebar-title">Platform</span>
+                    <ul class="docs-sidebar-nav">
+                        <li class="sidebar-group-label">Overview</li>
+                        <li><a href="../technology.html">Core Platform</a></li><li><a href="apis.html">APIs</a></li>
+                        <li><a href="../docs/authentication.html">Authentication</a></li><li><a href="integrations.html">Integrations</a></li>
+                        <li class="sidebar-group-label">Infrastructure</li>
+                        <li><a href="cloud-services.html">Cloud Services</a></li><li><a href="identity-access.html">Identity &amp; Access</a></li>
+                        <li><a href="api-gateway.html">API Gateway</a></li>
+                        <li><a href="event-systems.html" class="active">Event Systems</a></li>
+                        <li><a href="data-pipelines.html">Data Pipelines</a></li>
+                        <li class="sidebar-group-label">Developer Tools</li>
+                        <li><a href="sdks.html">SDKs</a></li><li><a href="cli-tools.html">CLI Tools</a></li>
+                        <li><a href="environments.html">Environments</a></li><li><a href="observability.html">Observability</a></li>
+                        <li><a href="webhooks.html">Webhooks</a></li>
+                        <li class="sidebar-group-label">Security</li>
+                        <li><a href="access-control.html">Access Control</a></li><li><a href="audit-logs.html">Audit Logs</a></li>
+                        <li><a href="encryption.html">Encryption</a></li><li><a href="compliance.html">Compliance</a></li>
+                    </ul>
+                </aside>
+
+                <article class="docs-content">
+                    <header class="docs-content-header">
+                        <span class="docs-kicker">Platform — Infrastructure</span>
+                        <h1>Event Systems</h1>
+                        <p>Ventryx is built around events. Everything that happens on the platform — a workflow completing, an approval being granted, a rate limit being exceeded — produces a structured event that you can react to in real time.</p>
+                    </header>
+
+                    <section class="docs-section">
+                        <h2>Event model</h2>
+                        <p>Every event has a consistent structure regardless of type:</p>
+                        <div class="docs-code">
+                            <span class="docs-code-label">Event object</span>
+                            <pre>{
+  "id": "evt_01HXYZ",
+  "type": "workflow.completed",
+  "created_at": "2026-04-03T09:15:00.000Z",
+  "data": {
+    "workflow_id": "wf_01HXYZ",
+    "run_id": "run_01HABC",
+    "status": "success",
+    "duration_ms": 412
+  }
+}</pre>
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Event types</h2>
+                        <div class="docs-table-wrap">
+                            <table class="docs-table">
+                                <thead><tr><th>Event type</th><th>Triggered when</th></tr></thead>
+                                <tbody>
+                                    <tr><td><code>workflow.started</code></td><td>A workflow run begins</td></tr>
+                                    <tr><td><code>workflow.completed</code></td><td>A workflow run finishes (success or failure)</td></tr>
+                                    <tr><td><code>workflow.failed</code></td><td>A workflow run encounters an unrecoverable error</td></tr>
+                                    <tr><td><code>approval.requested</code></td><td>A step requires human approval</td></tr>
+                                    <tr><td><code>approval.completed</code></td><td>An approver acts on a request</td></tr>
+                                    <tr><td><code>api_key.created</code></td><td>A new API key is issued</td></tr>
+                                    <tr><td><code>api_key.revoked</code></td><td>An API key is revoked</td></tr>
+                                    <tr><td><code>rate_limit.exceeded</code></td><td>A key exceeds its rate limit threshold</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Emitting custom events</h2>
+                        <p>You can emit your own domain events into the Ventryx event bus to trigger workflows or push to webhooks:</p>
+                        <div class="docs-code">
+                            <span class="docs-code-label">curl</span>
+                            <pre>curl -X POST https://api.ventryx.io/v1/events \
+  -H "Authorization: Bearer $VENTRYX_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "type": "order.placed",
+    "data": { "order_id": "ord_999", "amount": 249.00 }
+  }'</pre>
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Event delivery guarantees</h2>
+                        <p>The Ventryx event system is designed for <strong>at-least-once delivery</strong>. Events are durably persisted before acknowledgment, and any downstream webhook delivery is retried up to 5 times with exponential backoff on failure. Design your event consumers to be idempotent using the <code>event.id</code> field as a deduplication key.</p>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Querying events</h2>
+                        <p>Past events can be retrieved via the API with filtering by type, time range, or related resource:</p>
+                        <div class="docs-code">
+                            <pre>GET /v1/events?type=workflow.completed&from=2026-04-01&to=2026-04-03</pre>
+                        </div>
+                    </section>
+
+                    <nav class="docs-nav-footer">
+                        <a href="api-gateway.html" class="docs-nav-link"><span class="docs-nav-link-label">Previous</span><span class="docs-nav-link-title">← API Gateway</span></a>
+                        <a href="data-pipelines.html" class="docs-nav-link next"><span class="docs-nav-link-label">Next</span><span class="docs-nav-link-title">Data Pipelines →</span></a>
+                    </nav>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col"><div class="footer-brand"><span class="brand-mark">V</span><span class="brand-text">Ventryx</span></div><p class="footer-description">Ventryx Technologies builds modern infrastructure, APIs, automation platforms, and digital systems for modern businesses.</p></div>
+            <div class="footer-col"><h4>Platform</h4><ul><li><a href="../platform.html">Platform Overview</a></li><li><a href="../technology.html">Infrastructure</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../contact.html">Get Started</a></li></ul></div>
+            <div class="footer-col"><h4>Products</h4><ul><li><a href="../operra.html">Operra Platform</a></li><li><a href="../operra.html">Workflows</a></li><li><a href="../operra.html">Approvals</a></li><li><a href="../operra.html">Analytics</a></li></ul></div>
+            <div class="footer-col"><h4>Resources</h4><ul><li><a href="../docs.html">Documentation</a></li><li><a href="../docs/api-reference.html">API Reference</a></li><li><a href="../docs/guides.html">Developer Guides</a></li><li><a href="../support.html">Support</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About</a></li><li><a href="../technology.html">Technology</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 Ventryx Technologies LLC. All rights reserved.</p></div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Observability | Ventryx Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/pages/docs-inner.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="topbar"><div class="container topbar-inner"><nav class="topbar-nav">
+            <a href="../developers.html">Developers</a><a href="../docs.html">Docs</a>
+            <a href="../support.html">Support</a><a href="../login.html">Login</a>
+        </nav></div></div>
+        <div class="container header-inner">
+            <a href="../index.html" class="brand"><span class="brand-mark">V</span><span class="brand-text">Ventryx</span></a>
+            <nav class="site-nav"><ul class="nav-list">
+                <li><a href="../platform.html" class="active">Platform</a></li><li><a href="../products.html">Products</a></li>
+                <li><a href="../solutions.html">Solutions</a></li><li><a href="../resources.html">Resources</a></li>
+                <li><a href="../company.html">Company</a></li><li><a href="../pricing.html">Pricing</a></li>
+            </ul></nav>
+            <div class="header-actions">
+                <a href="../contact.html" class="btn btn-outline">Contact Sales</a>
+                <a href="../contact.html" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="docs-inner-page">
+        <div class="container">
+            <div class="docs-layout">
+                <aside class="docs-sidebar">
+                    <span class="docs-sidebar-title">Platform</span>
+                    <ul class="docs-sidebar-nav">
+                        <li class="sidebar-group-label">Overview</li>
+                        <li><a href="../technology.html">Core Platform</a></li><li><a href="apis.html">APIs</a></li>
+                        <li><a href="../docs/authentication.html">Authentication</a></li><li><a href="integrations.html">Integrations</a></li>
+                        <li class="sidebar-group-label">Infrastructure</li>
+                        <li><a href="cloud-services.html">Cloud Services</a></li><li><a href="identity-access.html">Identity &amp; Access</a></li>
+                        <li><a href="api-gateway.html">API Gateway</a></li><li><a href="event-systems.html">Event Systems</a></li>
+                        <li><a href="data-pipelines.html">Data Pipelines</a></li>
+                        <li class="sidebar-group-label">Developer Tools</li>
+                        <li><a href="sdks.html">SDKs</a></li><li><a href="cli-tools.html">CLI Tools</a></li>
+                        <li><a href="environments.html">Environments</a></li>
+                        <li><a href="observability.html" class="active">Observability</a></li>
+                        <li><a href="webhooks.html">Webhooks</a></li>
+                        <li class="sidebar-group-label">Security</li>
+                        <li><a href="access-control.html">Access Control</a></li><li><a href="audit-logs.html">Audit Logs</a></li>
+                        <li><a href="encryption.html">Encryption</a></li><li><a href="compliance.html">Compliance</a></li>
+                    </ul>
+                </aside>
+
+                <article class="docs-content">
+                    <header class="docs-content-header">
+                        <span class="docs-kicker">Platform — Developer Tools</span>
+                        <h1>Observability</h1>
+                        <p>Ventryx gives you full visibility into every request, workflow run, and event across your integration — from the dashboard, the API, or forwarded to your own observability stack.</p>
+                    </header>
+
+                    <section class="docs-section">
+                        <h2>Request logs</h2>
+                        <p>Every API request made against your organization is logged with:</p>
+                        <ul>
+                            <li>Request ID, timestamp, method, path, and status code</li>
+                            <li>Latency (total and gateway-only)</li>
+                            <li>API key ID and resolved scopes</li>
+                            <li>Request and response body (redacted for sensitive fields)</li>
+                        </ul>
+                        <div class="docs-code">
+                            <span class="docs-code-label">Query recent logs</span>
+                            <pre>GET /v1/logs?status=4xx&from=2026-04-01&limit=50</pre>
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Metrics</h2>
+                        <p>Platform metrics are available via the Analytics API and the dashboard. Key metrics include:</p>
+                        <div class="docs-table-wrap">
+                            <table class="docs-table">
+                                <thead><tr><th>Metric</th><th>Description</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Request rate</td><td>Requests per minute, broken down by endpoint and key</td></tr>
+                                    <tr><td>Error rate</td><td>4xx and 5xx responses as a percentage of total traffic</td></tr>
+                                    <tr><td>Latency (p50/p95/p99)</td><td>Response time percentiles by endpoint</td></tr>
+                                    <tr><td>Rate limit hits</td><td>Number of 429 responses by key and time window</td></tr>
+                                    <tr><td>Workflow runs</td><td>Total runs, success rate, and mean duration by workflow</td></tr>
+                                    <tr><td>Event throughput</td><td>Events emitted and processed per hour</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Exporting to your observability stack</h2>
+                        <p>Forward logs and metrics to your existing tools using the Datadog or OpenTelemetry integrations, or configure a log drain to stream to any HTTP endpoint:</p>
+                        <div class="docs-code">
+                            <span class="docs-code-label">Configure a log drain</span>
+                            <pre>curl -X POST https://api.ventryx.io/v1/log-drains \
+  -H "Authorization: Bearer $VENTRYX_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "url": "https://logs.yourcompany.com/ventryx",
+    "format": "json",
+    "types": ["request", "workflow_run", "event"]
+  }'</pre>
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Alerting</h2>
+                        <p>Set thresholds on any metric to receive alerts via email, Slack, or PagerDuty. Alerts are configured under <strong>Settings → Alerts</strong> in the dashboard, or via the <code>POST /v1/alerts</code> API endpoint.</p>
+                    </section>
+
+                    <nav class="docs-nav-footer">
+                        <a href="environments.html" class="docs-nav-link"><span class="docs-nav-link-label">Previous</span><span class="docs-nav-link-title">← Environments</span></a>
+                        <a href="webhooks.html" class="docs-nav-link next"><span class="docs-nav-link-label">Next</span><span class="docs-nav-link-title">Webhooks →</span></a>
+                    </nav>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col"><div class="footer-brand"><span class="brand-mark">V</span><span class="brand-text">Ventryx</span></div><p class="footer-description">Ventryx Technologies builds modern infrastructure, APIs, automation platforms, and digital systems for modern businesses.</p></div>
+            <div class="footer-col"><h4>Platform</h4><ul><li><a href="../platform.html">Platform Overview</a></li><li><a href="../technology.html">Infrastructure</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../contact.html">Get Started</a></li></ul></div>
+            <div class="footer-col"><h4>Products</h4><ul><li><a href="../operra.html">Operra Platform</a></li><li><a href="../operra.html">Workflows</a></li><li><a href="../operra.html">Approvals</a></li><li><a href="../operra.html">Analytics</a></li></ul></div>
+            <div class="footer-col"><h4>Resources</h4><ul><li><a href="../docs.html">Documentation</a></li><li><a href="../docs/api-reference.html">API Reference</a></li><li><a href="../docs/guides.html">Developer Guides</a></li><li><a href="../support.html">Support</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About</a></li><li><a href="../technology.html">Technology</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 Ventryx Technologies LLC. All rights reserved.</p></div>
+    </footer>
+</body>
+</html>

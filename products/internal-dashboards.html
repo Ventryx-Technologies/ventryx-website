@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internal Dashboards | Ventryx Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/pages/docs-inner.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="topbar"><div class="container topbar-inner"><nav class="topbar-nav">
+            <a href="../developers.html">Developers</a><a href="../docs.html">Docs</a>
+            <a href="../support.html">Support</a><a href="../login.html">Login</a>
+        </nav></div></div>
+        <div class="container header-inner">
+            <a href="../index.html" class="brand"><span class="brand-mark">V</span><span class="brand-text">Ventryx</span></a>
+            <nav class="site-nav"><ul class="nav-list">
+                <li><a href="../platform.html">Platform</a></li>
+                <li><a href="../products.html" class="active">Products</a></li>
+                <li><a href="../solutions.html">Solutions</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../company.html">Company</a></li>
+                <li><a href="../pricing.html">Pricing</a></li>
+            </ul></nav>
+            <div class="header-actions">
+                <a href="../contact.html" class="btn btn-outline">Contact Sales</a>
+                <a href="../contact.html" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="docs-inner-page">
+        <div class="container">
+            <div class="docs-layout">
+                <aside class="docs-sidebar">
+                    <span class="docs-sidebar-title">Products</span>
+                    <ul class="docs-sidebar-nav">
+                        <li class="sidebar-group-label">Overview</li>
+                        <li><a href="../operra.html">Operra Platform</a></li>
+                        <li><a href="admin-console.html">Admin Console</a></li>
+                        <li><a href="analytics.html">Analytics</a></li>
+                        <li><a href="automation.html">Automation</a></li>
+                        <li class="sidebar-group-label">Operations</li>
+                        <li><a href="workflows.html">Workflows</a></li>
+                        <li><a href="task-automation.html">Task Automation</a></li>
+                        <li><a href="approvals.html">Approvals</a></li>
+                        <li><a href="internal-dashboards.html" class="active">Internal Dashboards</a></li>
+                        <li class="sidebar-group-label">Analytics</li>
+                        <li><a href="reporting.html">Reporting</a></li>
+                        <li><a href="usage-metrics.html">Usage Metrics</a></li>
+                        <li><a href="activity-logs.html">Activity Logs</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                        <li class="sidebar-group-label">Automation</li>
+                        <li><a href="triggers.html">Triggers</a></li>
+                        <li><a href="rules-engine.html">Rules Engine</a></li>
+                        <li><a href="notifications.html">Notifications</a></li>
+                        <li><a href="integrations.html">Integrations</a></li>
+                    </ul>
+                </aside>
+
+                <article class="docs-content">
+                    <header class="docs-content-header">
+                        <span class="docs-kicker">Products — Operations</span>
+                        <h1>Internal Dashboards</h1>
+                        <p>Build internal tools, operational command centers, and custom views on top of your Ventryx data — without building and hosting a separate admin panel from scratch.</p>
+                    </header>
+
+                    <section class="docs-section">
+                        <h2>What you can build</h2>
+                        <ul>
+                            <li>Operations dashboards showing live workflow health and queue status</li>
+                            <li>Customer-facing status pages fed by real platform metrics</li>
+                            <li>Finance views showing usage, billing trends, and projected costs</li>
+                            <li>Engineering oncall boards with error rates, alerts, and recent incidents</li>
+                            <li>Custom approval queues for non-technical reviewers</li>
+                        </ul>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Dashboard components</h2>
+                        <div class="docs-table-wrap">
+                            <table class="docs-table">
+                                <thead><tr><th>Component</th><th>Description</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Metric tiles</td><td>Single-value KPIs with trend indicators (up/down vs. prior period)</td></tr>
+                                    <tr><td>Time series chart</td><td>Line or bar charts of any numeric metric over time</td></tr>
+                                    <tr><td>Table view</td><td>Paginated, searchable lists of resources (workflows, events, tasks)</td></tr>
+                                    <tr><td>Status indicator</td><td>Green / yellow / red health indicator with threshold config</td></tr>
+                                    <tr><td>Activity feed</td><td>Real-time stream of recent events or audit entries</td></tr>
+                                    <tr><td>Approval queue</td><td>List of pending approvals with one-click approve/reject</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Data sources</h2>
+                        <p>Dashboard components can pull from:</p>
+                        <ul>
+                            <li>Ventryx Analytics API (request metrics, workflow stats, event throughput)</li>
+                            <li>Your own API endpoints, fetched via configured HTTP data sources</li>
+                            <li>Static data or manually entered values for context panels</li>
+                        </ul>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2>Sharing and access</h2>
+                        <p>Dashboards can be shared with your full organization, restricted to specific roles, or published as read-only external links for stakeholders who don't have a Ventryx login.</p>
+                    </section>
+
+                    <nav class="docs-nav-footer">
+                        <a href="approvals.html" class="docs-nav-link"><span class="docs-nav-link-label">Previous</span><span class="docs-nav-link-title">← Approvals</span></a>
+                        <a href="reporting.html" class="docs-nav-link next"><span class="docs-nav-link-label">Next</span><span class="docs-nav-link-title">Reporting →</span></a>
+                    </nav>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col"><div class="footer-brand"><span class="brand-mark">V</span><span class="brand-text">Ventryx</span></div><p class="footer-description">Ventryx Technologies builds modern infrastructure, APIs, automation platforms, and digital systems for modern businesses.</p></div>
+            <div class="footer-col"><h4>Platform</h4><ul><li><a href="../platform.html">Platform Overview</a></li><li><a href="../technology.html">Infrastructure</a></li><li><a href="../pricing.html">Pricing</a></li><li><a href="../contact.html">Get Started</a></li></ul></div>
+            <div class="footer-col"><h4>Products</h4><ul><li><a href="../operra.html">Operra Platform</a></li><li><a href="workflows.html">Workflows</a></li><li><a href="approvals.html">Approvals</a></li><li><a href="analytics.html">Analytics</a></li></ul></div>
+            <div class="footer-col"><h4>Resources</h4><ul><li><a href="../docs.html">Documentation</a></li><li><a href="../docs/api-reference.html">API Reference</a></li><li><a href="../docs/guides.html">Developer Guides</a></li><li><a href="../support.html">Support</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About</a></li><li><a href="../technology.html">Technology</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 Ventryx Technologies LLC. All rights reserved.</p></div>
+    </footer>
+</body>
+</html>
