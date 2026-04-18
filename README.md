@@ -1,59 +1,124 @@
-# Ventryx Website
+# Ventryx Technologies — Web Platform
 
-Marketing and product website for Ventryx Technologies, including the public site, documentation pages, support content, and the interactive Operra demo workspace.
+This repository contains the public-facing web platform for **Ventryx Technologies, LLC**, including the marketing site, product experience, documentation, support content, and the interactive Operra demo environment.
 
-## Overview
+---
 
-This repo is a static HTML/CSS/JavaScript site.
+## 🚀 Overview
+
+This is a statically served front-end application built with HTML, CSS, and vanilla JavaScript, designed for performance, simplicity, and full control over user experience without a build pipeline.
 
 It includes:
-- marketing pages for Ventryx
-- platform, product, company, pricing, and resource pages
-- documentation and support pages
-- a mock login flow
-- the interactive `operra-demo.html` demo account with `Startup`, `Growth`, and `Enterprise` demo tiers
 
-## Stack
+* Marketing pages for Ventryx Technologies
+* Platform, product, company, pricing, and resource pages
+* Documentation and support content
+* A mock authentication flow
+* A fully interactive Operra demo workspace
 
-- HTML
-- CSS
-- vanilla JavaScript
-- Google Fonts (`Inter`)
+---
 
-No build step is required.
+## 🎯 Purpose
 
-## Project Structure
+This repository serves as:
 
-Key top-level pages:
-- `index.html`
-- `platform.html`
-- `products.html`
-- `solutions.html`
-- `resources.html`
-- `company.html`
-- `pricing.html`
-- `contact.html`
-- `about.html`
-- `developers.html`
-- `docs.html`
-- `support.html`
-- `login.html`
-- `operra.html`
-- `operra-demo.html`
+* The primary marketing and brand presence for Ventryx Technologies
+* A product showcase for the Operra platform
+* A documentation and support entry point
+* A controlled demo environment for prospects, clients, and stakeholders
 
-Key folders:
-- `assets/css/` shared styles and page styles
-- `assets/js/` shared scripts and demo behavior
-- `platform/` platform detail pages
-- `products/` product detail pages
-- `docs/` documentation detail pages
-- `support/` support subpages
-- `components/` reference header/footer snippets and component placeholders
-- `data/` JSON data files used for site content/reference
+---
 
-## Local Preview
+## 🧠 Operra Interactive Demo
 
-Because this is a static site, the easiest preview is a local HTTP server from the repo root:
+The platform includes a fully interactive front-end simulation of **Operra**, Ventryx’s core SaaS product.
+
+This allows users to explore product capabilities without requiring authentication or backend dependencies.
+
+### Capabilities
+
+* Multi-tier simulation:
+
+  * `Startup`
+  * `Growth`
+  * `Enterprise`
+* Dashboard metrics and live activity feeds
+* API key management interface
+* Request logs and analytics views
+* Billing and organization UI
+* Settings and platform controls (UI-level)
+
+### Purpose of the Demo
+
+* Demonstrate product capabilities
+* Communicate scalability across tiers
+* Support sales, onboarding, and presentations
+
+### Demo Access
+
+* Email: `demo@ventryx.com`
+* Password: `demo`
+
+Successful login routes to:
+
+* `operra-demo.html`
+
+### Notes
+
+* This is a **front-end simulation only**
+* Search functionality is mocked
+* Create/edit actions are simulated
+* No backend or database is connected
+
+---
+
+## 🧩 Stack
+
+* HTML5
+* CSS3
+* Vanilla JavaScript
+* Google Fonts (`Inter`)
+
+No build step or framework is required.
+
+---
+
+## 📁 Project Structure
+
+### Top-Level Pages
+
+* `index.html`
+* `platform.html`
+* `products.html`
+* `solutions.html`
+* `resources.html`
+* `company.html`
+* `pricing.html`
+* `contact.html`
+* `about.html`
+* `developers.html`
+* `docs.html`
+* `support.html`
+* `login.html`
+* `operra.html`
+* `operra-demo.html`
+
+### Key Directories
+
+* `assets/css/` — shared styles and page-level styles
+* `assets/js/` — shared scripts and demo behavior
+* `platform/` — platform-specific pages
+* `products/` — product detail pages
+* `docs/` — documentation content
+* `support/` — support and help pages
+* `components/` — header/footer references and UI snippets
+* `data/` — JSON data used for content and demo behavior
+
+---
+
+## 🧪 Local Development
+
+Because this is a static site, you can run a local server from the project root:
 
 ```bash
 python3 -m http.server 8123
@@ -65,73 +130,70 @@ Then open:
 http://127.0.0.1:8123/
 ```
 
-## Demo Account
+---
 
-The mock login page supports a demo account:
+## 🧭 Navigation & UI
 
-- Email: `demo@ventryx.com`
-- Password: `demo`
+Shared navigation logic:
 
-Successful demo login routes to:
+* `assets/js/main.js`
 
-- `operra-demo.html`
+Shared styles:
 
-The Operra demo includes:
-- Dashboard
-- Analytics
-- API Keys
-- Request Logs
-- Rate Limits
-- Billing
-- Organizations
-- Settings placeholder
+* `assets/css/main.css`
+* `assets/css/navigation.css`
 
-Tier switcher:
-- `Startup`
-- `Growth`
-- `Enterprise`
+The site uses:
 
-Important:
-- this is a front-end demo only
-- search is mock behavior
-- create/edit actions are mock behavior
-- forms and account actions are not connected to a backend
+* Interactive desktop mega-menu
+* Responsive mobile navigation system
 
-## Navigation
+---
 
-Shared navigation behavior lives in:
+## 🖥️ Demo System Files
 
-- `assets/js/main.js`
+* `operra-demo.html`
+* `assets/js/operra-demo.js`
+* `assets/css/pages/operra-demo.css`
 
-Important shared styles live in:
+---
 
-- `assets/css/main.css`
-- `assets/css/navigation.css`
+## 📦 Status
 
-The main marketing pages use the interactive desktop mega-menu and mobile menu pattern.
+* Production Ready
+* Static Deployment (CDN-compatible)
+* No Build Step Required
 
-## Main Demo Files
+---
 
-- [operra-demo.html](./operra-demo.html)
-- [assets/js/operra-demo.js](./assets/js/operra-demo.js)
-- [assets/css/pages/operra-demo.css](./assets/css/pages/operra-demo.css)
+## 🚀 Pre-Launch Checklist
 
-## Launch Notes
+Before deployment, verify:
 
-Before publishing, do a quick manual pass for:
-- desktop navbar and mega-menu behavior
-- mobile menu behavior
-- top-level page links
-- nested page links
-- demo tier switching in `operra-demo.html`
-- login-to-demo flow from `login.html`
+* Desktop navigation and mega-menu behavior
+* Mobile navigation functionality
+* Internal and nested page links
+* Demo tier switching (`Startup`, `Growth`, `Enterprise`)
+* Login-to-demo flow from `login.html`
 
-## Repository Notes
+Also validate using browser developer tools:
 
-- `components/site-header.html` and `components/site-footer.html` are reference snippets, not a live include system
-- the site currently relies on static page files rather than a templating/build pipeline
-- if you change shared nav or footer markup, check multiple top-level pages afterward
+* No console errors
+* No missing assets (404s)
+* No blocked scripts or styles
 
-## License
+---
 
-See [LICENSE](./LICENSE).
+## ⚠️ Repository Notes
+
+* `components/site-header.html` and `components/site-footer.html` are reference snippets (no templating system is used)
+* The site is fully static — changes to shared components must be manually applied across pages
+* After updating navigation or layout, test multiple pages for consistency
+
+---
+
+## 📄 License
+
+See [LICENSE](./LICENSE)
+
+---
