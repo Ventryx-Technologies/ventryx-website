@@ -17,18 +17,298 @@
 
 <body>
     <header class="site-header">
-        <div class="container header-inner">
-            <a href="index.html" class="logo">Ventryx</a>
+        <div class="utility-bar">
+            <div class="container utility-bar-inner">
+                <div class="utility-spacer"></div>
 
-            <nav class="site-nav" aria-label="Primary">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="products.html" class="active">Products</a>
-                <a href="technology.html">Technology</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+                <div class="utility-links">
+                    <a href="developers.html">Developers</a>
+                    <a href="docs.html">Docs</a>
+                    <a href="support.html">Support</a>
+                    <a href="login.html">Login</a>
+                </div>
+            </div>
+        </div>
 
-            <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+        <div class="main-navbar">
+            <div class="container navbar-inner">
+                <a href="index.html" class="brand" aria-label="Ventryx home">
+                    <span class="brand-mark">V</span>
+                    <span class="brand-text">Ventryx</span>
+                </a>
+
+                <nav class="desktop-nav" aria-label="Primary">
+                    <ul class="nav-list">
+                        <li class="nav-item has-mega-menu">
+                            <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+                                Platform
+                                <span class="nav-caret">▾</span>
+                            </button>
+
+                            <div class="mega-menu">
+                                <div class="mega-menu-inner mega-menu-4col">
+                                    <div class="mega-col mega-col-featured">
+                                        <p class="mega-label">Overview</p>
+                                        <a href="technology.html" class="mega-feature-title">Core Platform</a>
+                                        <p class="mega-feature-text">
+                                            Build, manage, and scale modern software systems with
+                                            Ventryx infrastructure.
+                                        </p>
+
+                                        <a href="platform/apis.html" class="mega-link-row">APIs</a>
+                                        <a href="docs/authentication.html" class="mega-link-row">Authentication</a>
+                                        <a href="platform/integrations.html" class="mega-link-row">Integrations</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Infrastructure</p>
+                                        <a href="platform/cloud-services.html" class="mega-link-title">Cloud Services</a>
+                                        <a href="platform/identity-access.html" class="mega-link-title">Identity &amp; Access</a>
+                                        <a href="platform/api-gateway.html" class="mega-link-title">API Gateway</a>
+                                        <a href="platform/event-systems.html" class="mega-link-title">Event Systems</a>
+                                        <a href="platform/data-pipelines.html" class="mega-link-title">Data Pipelines</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Developer Tools</p>
+                                        <a href="platform/sdks.html" class="mega-link-title">SDKs</a>
+                                        <a href="platform/cli-tools.html" class="mega-link-title">CLI Tools</a>
+                                        <a href="platform/environments.html" class="mega-link-title">Environments</a>
+                                        <a href="platform/observability.html" class="mega-link-title">Observability</a>
+                                        <a href="platform/webhooks.html" class="mega-link-title">Webhooks</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Security</p>
+                                        <a href="platform/access-control.html" class="mega-link-title">Access Control</a>
+                                        <a href="platform/audit-logs.html" class="mega-link-title">Audit Logs</a>
+                                        <a href="platform/encryption.html" class="mega-link-title">Encryption</a>
+                                        <a href="platform/compliance.html" class="mega-link-title">Compliance</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item has-mega-menu">
+                            <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+                                Products
+                                <span class="nav-caret">▾</span>
+                            </button>
+
+                            <div class="mega-menu">
+                                <div class="mega-menu-inner mega-menu-4col">
+                                    <div class="mega-col mega-col-featured">
+                                        <p class="mega-label">Products</p>
+                                        <a href="operra.html" class="mega-feature-title">Operra Platform</a>
+                                        <p class="mega-feature-text">
+                                            Tools for modern operations, automation, internal workflows,
+                                            and software teams.
+                                        </p>
+
+                                        <a href="products/admin-console.html" class="mega-link-row">Admin Console</a>
+                                        <a href="products/analytics.html" class="mega-link-row">Analytics</a>
+                                        <a href="products/automation.html" class="mega-link-row">Automation</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Operations</p>
+                                        <a href="products/workflows.html" class="mega-link-title">Workflows</a>
+                                        <a href="products/task-automation.html" class="mega-link-title">Task Automation</a>
+                                        <a href="products/approvals.html" class="mega-link-title">Approvals</a>
+                                        <a href="products/internal-dashboards.html" class="mega-link-title">Internal Dashboards</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Analytics</p>
+                                        <a href="products/reporting.html" class="mega-link-title">Reporting</a>
+                                        <a href="products/usage-metrics.html" class="mega-link-title">Usage Metrics</a>
+                                        <a href="products/activity-logs.html" class="mega-link-title">Activity Logs</a>
+                                        <a href="products/insights.html" class="mega-link-title">Insights</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Automation</p>
+                                        <a href="products/triggers.html" class="mega-link-title">Triggers</a>
+                                        <a href="products/rules-engine.html" class="mega-link-title">Rules Engine</a>
+                                        <a href="products/notifications.html" class="mega-link-title">Notifications</a>
+                                        <a href="products/integrations.html" class="mega-link-title">Integrations</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item has-mega-menu">
+                            <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+                                Solutions
+                                <span class="nav-caret">▾</span>
+                            </button>
+
+                            <div class="mega-menu">
+                                <div class="mega-menu-inner mega-menu-4col">
+                                    <div class="mega-col">
+                                        <p class="mega-label">Use Cases</p>
+                                        <a href="solutions.html" class="mega-link-title">Internal Platforms</a>
+                                        <a href="solutions.html" class="mega-link-title">Operations Automation</a>
+                                        <a href="solutions.html" class="mega-link-title">Developer Workflows</a>
+                                        <a href="solutions.html" class="mega-link-title">Business Systems</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Teams</p>
+                                        <a href="solutions.html" class="mega-link-title">Engineering</a>
+                                        <a href="solutions.html" class="mega-link-title">Product</a>
+                                        <a href="solutions.html" class="mega-link-title">Operations</a>
+                                        <a href="company.html" class="mega-link-title">Leadership</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Company Size</p>
+                                        <a href="solutions.html" class="mega-link-title">Startup</a>
+                                        <a href="solutions.html" class="mega-link-title">Growing Teams</a>
+                                        <a href="solutions.html" class="mega-link-title">Enterprise</a>
+                                    </div>
+
+                                    <div class="mega-col mega-card-col">
+                                        <div class="mega-card">
+                                            <p class="mega-card-label">Featured</p>
+                                            <h4>Built for modern software teams</h4>
+                                            <p>
+                                                Ventryx helps teams centralize workflows, automation,
+                                                and infrastructure decisions.
+                                            </p>
+                                            <a href="solutions.html" class="mega-card-link">Explore solutions</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item has-mega-menu">
+                            <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+                                Resources
+                                <span class="nav-caret">▾</span>
+                            </button>
+
+                            <div class="mega-menu">
+                                <div class="mega-menu-inner mega-menu-4col">
+                                    <div class="mega-col">
+                                        <p class="mega-label">Developers</p>
+                                        <a href="docs.html" class="mega-link-title">Documentation</a>
+                                        <a href="docs.html" class="mega-link-title">API Reference</a>
+                                        <a href="docs.html" class="mega-link-title">Code Samples</a>
+                                        <a href="docs.html" class="mega-link-title">Changelog</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Learn</p>
+                                        <a href="resources.html" class="mega-link-title">Blog</a>
+                                        <a href="resources.html" class="mega-link-title">Guides</a>
+                                        <a href="resources.html" class="mega-link-title">Case Studies</a>
+                                        <a href="resources.html" class="mega-link-title">Tutorials</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Support</p>
+                                        <a href="support.html" class="mega-link-title">Help Center</a>
+                                        <a href="contact.html" class="mega-link-title">Contact Support</a>
+                                        <a href="contact.html" class="mega-link-title">Partners</a>
+                                        <a href="support.html" class="mega-link-title">Status</a>
+                                    </div>
+
+                                    <div class="mega-col mega-card-col">
+                                        <div class="mega-card">
+                                            <p class="mega-card-label">Latest</p>
+                                            <h4>Developer resources that move faster</h4>
+                                            <p>
+                                                Explore docs, guides, examples, and support material
+                                                built for real product teams.
+                                            </p>
+                                            <a href="resources.html" class="mega-card-link">Go to resources</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item has-mega-menu">
+                            <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+                                Company
+                                <span class="nav-caret">▾</span>
+                            </button>
+
+                            <div class="mega-menu">
+                                <div class="mega-menu-inner mega-menu-4col">
+                                    <div class="mega-col">
+                                        <p class="mega-label">Overview</p>
+                                        <a href="about.html" class="mega-link-title">About Ventryx</a>
+                                        <a href="about.html" class="mega-link-title">Mission</a>
+                                        <a href="about.html" class="mega-link-title">Vision</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Company</p>
+                                        <a href="company.html" class="mega-link-title">Leadership</a>
+                                        <a href="company.html" class="mega-link-title">Careers</a>
+                                        <a href="company.html" class="mega-link-title">News</a>
+                                        <a href="contact.html" class="mega-link-title">Contact</a>
+                                    </div>
+
+                                    <div class="mega-col">
+                                        <p class="mega-label">Technology</p>
+                                        <a href="technology.html" class="mega-link-title">Platform Architecture</a>
+                                        <a href="technology.html" class="mega-link-title">Security</a>
+                                        <a href="technology.html" class="mega-link-title">Reliability</a>
+                                    </div>
+
+                                    <div class="mega-col mega-card-col">
+                                        <div class="mega-card">
+                                            <p class="mega-card-label">Ventryx</p>
+                                            <h4>Infrastructure for modern businesses</h4>
+                                            <p>
+                                                Building scalable systems, tools, and platforms for the
+                                                next generation of software.
+                                            </p>
+                                            <a href="about.html" class="mega-card-link">Learn more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="pricing.html" class="nav-link">Pricing</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="nav-actions">
+                    <button class="search-btn" type="button" aria-label="Search">
+                        <span>⌕</span>
+                    </button>
+
+                    <a href="contact.html" class="btn btn-outline">Contact Sales</a>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+
+                    <button class="mobile-menu-toggle" type="button" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu" aria-label="Mobile navigation">
+            <div class="mobile-menu-inner">
+                <a href="platform.html">Platform</a>
+                <a href="products.html">Products</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="resources.html">Resources</a>
+                <a href="company.html">Company</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact Sales</a>
+                <a href="contact.html" class="mobile-cta">Get Started</a>
+            </div>
         </div>
     </header>
 
@@ -95,34 +375,65 @@
 
     <footer class="site-footer">
         <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="index.html" class="footer-logo">Ventryx Technologies</a>
-                <p>
-                    Ventryx Technologies LLC builds scalable software platforms,
-                    APIs, and digital infrastructure for modern businesses.
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <span class="brand-mark">V</span>
+                    <span class="brand-text">Ventryx</span>
+                </div>
+
+                <p class="footer-description">
+                    Ventryx Technologies builds modern infrastructure, APIs,
+                    automation platforms, and digital systems for modern businesses.
                 </p>
             </div>
 
-            <div class="footer-links">
-                <h4>Company</h4>
-                <a href="about.html">About</a>
-                <a href="products.html">Products</a>
-                <a href="technology.html">Technology</a>
-                <a href="contact.html">Contact</a>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="platform.html">Platform Overview</a></li>
+                    <li><a href="docs.html">APIs</a></li>
+                    <li><a href="docs.html">Authentication</a></li>
+                    <li><a href="platform.html">Automation</a></li>
+                    <li><a href="technology.html">Infrastructure</a></li>
+                </ul>
             </div>
 
-            <div class="footer-links">
-                <h4>Platform</h4>
-                <a href="operra.html">Operra</a>
-                <a href="technology.html">Infrastructure</a>
-                <a href="contact.html">Partnerships</a>
+            <div class="footer-col">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="operra.html">Operra Platform</a></li>
+                    <li><a href="operra.html">Workflows</a></li>
+                    <li><a href="operra.html">Approvals</a></li>
+                    <li><a href="operra.html">Analytics</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="docs.html">Documentation</a></li>
+                    <li><a href="docs.html">API Reference</a></li>
+                    <li><a href="docs.html">Developer Guides</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="company.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
         </div>
 
-        <div class="container footer-bottom">
+        <div class="footer-bottom">
             <p>© 2026 Ventryx Technologies LLC. All rights reserved.</p>
         </div>
     </footer>
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
