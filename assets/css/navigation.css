@@ -380,6 +380,10 @@
     background: #ffffff;
 }
 
+.mobile-menu.show {
+    display: block;
+}
+
 .mobile-menu-inner {
     display: flex;
     flex-direction: column;
@@ -441,7 +445,7 @@
     }
 
     .mobile-menu {
-        display: block;
+        display: none;
     }
 
     .navbar-inner {
