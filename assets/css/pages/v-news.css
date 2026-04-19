@@ -1,0 +1,428 @@
+/* ========================================
+   Ventryx News Page
+======================================== */
+
+.v-news-page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background:
+        radial-gradient(circle at 12% 12%, rgba(42, 89, 255, 0.22), transparent 26%),
+        radial-gradient(circle at 85% 18%, rgba(0, 180, 255, 0.12), transparent 24%),
+        radial-gradient(circle at 52% 62%, rgba(32, 76, 201, 0.12), transparent 30%),
+        linear-gradient(135deg, #03123a 0%, #041a57 45%, #03102e 100%);
+    overflow-x: hidden;
+    color: #ffffff;
+}
+
+.v-news-page main {
+    position: relative;
+    z-index: 1;
+    flex: 1 0 auto;
+}
+
+.v-news-page::before,
+.v-news-page::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    pointer-events: none;
+    filter: blur(8px);
+    opacity: 0.45;
+}
+
+.v-news-page::before {
+    width: 420px;
+    height: 420px;
+    top: 96px;
+    left: -120px;
+    background: radial-gradient(circle, rgba(76, 124, 255, 0.22) 0%, transparent 70%);
+}
+
+.v-news-page::after {
+    width: 460px;
+    height: 460px;
+    top: 150px;
+    right: -140px;
+    background: radial-gradient(circle, rgba(0, 194, 255, 0.16) 0%, transparent 72%);
+}
+
+.v-news-hero {
+    position: relative;
+    z-index: 1;
+    padding: 84px 0 26px;
+}
+
+.v-news-hero .container,
+.v-news-content .container,
+.v-news-page .site-footer .container {
+    position: relative;
+    z-index: 1;
+}
+
+.v-news-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #7fb0ff;
+}
+
+.v-news-title {
+    margin: 0 0 16px;
+    max-width: 700px;
+    font-size: clamp(2.9rem, 6vw, 5.2rem);
+    line-height: 0.94;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+    color: #ffffff;
+    text-wrap: balance;
+}
+
+.v-news-description {
+    max-width: 740px;
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: rgba(235, 243, 255, 0.82);
+}
+
+.v-news-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 0 110px;
+}
+
+.v-news-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.8fr);
+    gap: 28px;
+    align-items: start;
+    margin-bottom: 44px;
+    padding: 28px;
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 32px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+        rgba(5, 14, 38, 0.26);
+    box-shadow: 0 28px 70px rgba(1, 10, 30, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.v-news-card {
+    max-width: 860px;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 28px;
+    padding: 34px 32px 24px;
+    box-shadow:
+        0 30px 80px rgba(2, 12, 39, 0.26),
+        0 1px 0 rgba(255, 255, 255, 0.42) inset;
+    backdrop-filter: blur(10px);
+}
+
+.v-news-featured {
+    max-width: none;
+    min-height: 100%;
+}
+
+.v-news-featured h2,
+.v-news-card h2,
+.v-news-card h3 {
+    margin: 0 0 14px;
+    font-weight: 800;
+    line-height: 1.12;
+    color: #0d1730;
+    letter-spacing: -0.03em;
+}
+
+.v-news-featured h2,
+.v-news-card h2 {
+    font-size: clamp(1.85rem, 3vw, 2.35rem);
+}
+
+.v-news-card h3 {
+    margin-top: 28px;
+    font-size: 1.55rem;
+}
+
+.v-news-card p {
+    margin: 0 0 16px;
+    font-size: 1.02rem;
+    line-height: 1.82;
+    color: #4e5b78;
+}
+
+.v-news-card hr {
+    border: 0;
+    border-top: 1px solid rgba(13, 23, 48, 0.08);
+    margin: 26px 0 18px;
+}
+
+.v-news-meta {
+    margin-top: 12px;
+    font-size: 0.96rem;
+    color: #73819c;
+}
+
+.v-news-meta strong {
+    color: #55627d;
+    font-weight: 600;
+}
+
+.v-news-featured-head,
+.v-news-item-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.v-news-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.v-news-date {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.06);
+    color: #475569;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.v-news-tags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.v-news-tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0 10px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.08);
+    color: #315edb;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.v-news-sidebar {
+    display: grid;
+    gap: 20px;
+    align-content: start;
+}
+
+.v-news-sidecard {
+    background: rgba(9, 18, 45, 0.48);
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    border-radius: 24px;
+    padding: 24px 22px;
+    box-shadow: 0 18px 40px rgba(1, 10, 30, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.v-news-sidecard h3 {
+    margin: 0 0 12px;
+    font-size: 1.15rem;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.v-news-sidecard p {
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: rgba(226, 232, 240, 0.8);
+}
+
+.v-news-sidecard a {
+    color: #8ab4ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.v-news-sidecard a:hover {
+    text-decoration: underline;
+}
+
+.v-news-stream {
+    margin-top: 0;
+}
+
+.v-news-stream-head {
+    margin-bottom: 22px;
+}
+
+.v-news-stream-head h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.v-news-stream-head p {
+    margin: 0;
+    max-width: 620px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(226, 232, 240, 0.78);
+}
+
+.v-news-list {
+    display: grid;
+    gap: 18px;
+}
+
+.v-news-item {
+    position: relative;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid rgba(255, 255, 255, 0.68);
+    border-radius: 24px;
+    padding: 24px 24px 22px;
+    box-shadow:
+        0 20px 50px rgba(2, 12, 39, 0.22),
+        0 1px 0 rgba(255, 255, 255, 0.4) inset;
+}
+
+.v-news-item h3 {
+    margin: 0 0 12px;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+    color: #0d1730;
+}
+
+.v-news-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #51607d;
+}
+
+.v-news-page .site-footer {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    border-top: 1px solid rgba(148, 163, 184, 0.16);
+    background: rgba(2, 6, 23, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width: 991px) {
+    .v-news-page::before,
+    .v-news-page::after {
+        opacity: 0.34;
+    }
+
+    .v-news-hero {
+        padding: 72px 0 22px;
+    }
+
+    .v-news-title {
+        max-width: 620px;
+    }
+
+    .v-news-description {
+        max-width: 620px;
+        font-size: 1.03rem;
+    }
+
+    .v-news-layout {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-bottom: 36px;
+        padding: 22px;
+        border-radius: 26px;
+    }
+
+    .v-news-content {
+        padding-bottom: 90px;
+    }
+
+    .v-news-card {
+        max-width: 100%;
+        padding: 28px 24px 22px;
+        border-radius: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .v-news-page::before,
+    .v-news-page::after {
+        display: none;
+    }
+
+    .v-news-hero {
+        padding: 58px 0 18px;
+    }
+
+    .v-news-title {
+        font-size: clamp(2.2rem, 11vw, 3.8rem);
+        line-height: 0.98;
+    }
+
+    .v-news-description {
+        font-size: 0.98rem;
+        line-height: 1.72;
+    }
+
+    .v-news-content {
+        padding-bottom: 70px;
+    }
+
+    .v-news-layout {
+        padding: 16px;
+        border-radius: 22px;
+    }
+
+    .v-news-card,
+    .v-news-item {
+        padding: 22px 18px 20px;
+        border-radius: 22px;
+    }
+
+    .v-news-featured-head,
+    .v-news-item-top {
+        align-items: flex-start;
+    }
+
+    .v-news-sidecard {
+        padding: 20px 18px;
+        border-radius: 20px;
+    }
+
+    .v-news-stream-head h2 {
+        font-size: 1.9rem;
+    }
+
+    .v-news-item h3 {
+        font-size: 1.18rem;
+    }
+}
