@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const cookieConsentKey = "ventryx_cookie_consent";
     const mobileToggle = document.querySelector(".mobile-menu-toggle");
     const mobileMenu = document.querySelector(".mobile-menu");
     const navItems = document.querySelectorAll(".has-mega-menu");
@@ -171,6 +172,47 @@ document.addEventListener("DOMContentLoaded", function () {
             if (emailInput)    emailInput.value    = "demo@ventryx.com";
             if (passwordInput) passwordInput.value = "demo";
             emailInput && emailInput.focus();
+        });
+    }
+
+    /* =========================
+       COOKIE BANNER
+    ========================= */
+    if (!localStorage.getItem(cookieConsentKey)) {
+        const banner = document.createElement("aside");
+        banner.className = "cookie-banner";
+        banner.setAttribute("role", "dialog");
+        banner.setAttribute("aria-label", "Cookie notice");
+        banner.innerHTML = `
+            <div class="cookie-banner__content">
+                <p class="cookie-banner__title">We use cookies</p>
+                <p class="cookie-banner__text">
+                    We use cookies to improve site performance and understand usage with Vercel Analytics.
+                    By continuing, you agree to our <a href="privacy.html">Privacy Policy</a>.
+                </p>
+            </div>
+            <div class="cookie-banner__actions">
+                <button type="button" class="btn btn-secondary cookie-banner-dismiss">Not now</button>
+                <button type="button" class="btn btn-primary cookie-banner-accept">Accept</button>
+            </div>
+        `;
+
+        document.body.appendChild(banner);
+
+        const dismissButton = banner.querySelector(".cookie-banner-dismiss");
+        const acceptButton = banner.querySelector(".cookie-banner-accept");
+
+        function closeCookieBanner(value) {
+            localStorage.setItem(cookieConsentKey, value);
+            banner.remove();
+        }
+
+        dismissButton && dismissButton.addEventListener("click", function () {
+            closeCookieBanner("dismissed");
+        });
+
+        acceptButton && acceptButton.addEventListener("click", function () {
+            closeCookieBanner("accepted");
         });
     }
 
