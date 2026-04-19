@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!mobileMenu || !mobileToggle) return;
 
         mobileMenu.classList.toggle("show", isOpen);
+        if (window.innerWidth <= 980) {
+            mobileMenu.style.display = isOpen ? "block" : "none";
+        } else {
+            mobileMenu.style.display = "";
+        }
         mobileToggle.setAttribute("aria-expanded", String(isOpen));
         mobileToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
     }
@@ -31,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ========================= */
     if (mobileToggle && mobileMenu) {
         mobileToggle.setAttribute("aria-expanded", "false");
+        setMobileMenuState(false);
         mobileToggle.addEventListener("click", function () {
             setMobileMenuState(!mobileMenu.classList.contains("show"));
         });
@@ -86,6 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (window.innerWidth <= 980) {
             closeAllMegaMenus();
+            if (mobileMenu) {
+                mobileMenu.style.display = mobileMenu.classList.contains("show") ? "block" : "none";
+            }
         }
     });
 
